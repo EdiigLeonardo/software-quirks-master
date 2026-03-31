@@ -1,4 +1,4 @@
-export type Category = "js-fundamentals" | "js-weird" | "typescript";
+export type Category = "js-fundamentals" | "js-weird" | "typescript" | "cloud-devops";
 
 export interface Question {
   id: number;
