@@ -7,12 +7,13 @@ interface Props {
   totalQuestions: number;
 }
 
-const categories: Category[] = ["js-fundamentals", "js-weird", "typescript"];
+const categories: Category[] = ["js-fundamentals", "js-weird", "typescript", "cloud-devops"];
 
 const categoryIcons: Record<Category, string> = {
   "js-fundamentals": "⚡",
   "js-weird": "🤯",
   "typescript": "🔷",
+  "cloud-devops": "☁️",
 };
 
 export function QuizStart({

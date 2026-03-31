@@ -12,6 +12,7 @@ const Index = () => {
     "js-fundamentals",
     "js-weird",
     "typescript",
+    "cloud-devops",
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
