@@ -14,12 +14,14 @@ export const categoryLabels: Record<Category, string> = {
   "js-fundamentals": "JS Fundamentals",
   "js-weird": "JS Is Weird",
   "typescript": "TypeScript",
+  "cloud-devops": "Cloud & DevOps",
 };
 
 export const categoryDescriptions: Record<Category, string> = {
   "js-fundamentals": "Closures, prototypes, async, scope e mais",
   "js-weird": "Type coercion, quirks e comportamentos inesperados",
   "typescript": "Tipos, generics, utility types e type system",
+  "cloud-devops": "AWS, Docker, CI/CD, Kubernetes e infraestrutura",
 };
 
 export const questions: Question[] = [
