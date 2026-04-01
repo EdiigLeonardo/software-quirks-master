@@ -3772,7 +3772,7 @@ export const questions: Question[] = [
   {
     id: 705,
     category: "azure-devops",
-    code: `# Pipeline Templates\n# templates/build.yml\nparameters:\n  - name: nodeVersion\n    type: string\n    default: '20'\n\nsteps:\n  - task: NodeTool@0\n    inputs:\n      versionSpec: '${{ parameters.nodeVersion }}'\n  - script: npm ci\n  - script: npm run build\n\n# main pipeline\nstages:\n  - stage: Build\n    jobs:\n      - job: Build\n        steps:\n          - template: templates/build.yml\n            parameters:\n              nodeVersion: '20'`,
+    code: "# Pipeline Templates\n# templates/build.yml\nparameters:\n  - name: nodeVersion\n    type: string\n    default: '20'\n\nsteps:\n  - task: NodeTool@0\n    inputs:\n      versionSpec: '${{ parameters.nodeVersion }}'\n  - script: npm ci\n  - script: npm run build\n\n# main pipeline\nstages:\n  - stage: Build\n    jobs:\n      - job: Build\n        steps:\n          - template: templates/build.yml\n            parameters:\n              nodeVersion: '20'",
     question: "Para que servem Pipeline Templates?",
     options: [
       "Gerar código automaticamente",
