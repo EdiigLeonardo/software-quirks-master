@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { questions, Category, categoryLabels, categoryDescriptions } from "@/data/questions";
+import { questions, Category, categoryLabels, categoryDescriptions, allCategories } from "@/data/questions";
 import { QuizStart } from "@/components/QuizStart";
 import { QuizQuestion } from "@/components/QuizQuestion";
 import { QuizResults } from "@/components/QuizResults";
@@ -8,23 +8,23 @@ type QuizState = "start" | "playing" | "results";
 
 const Index = () => {
   const [state, setState] = useState<QuizState>("start");
-  const [selectedCategories, setSelectedCategories] = useState<Category[]>([
-    "js-fundamentals",
-    "js-weird",
-    "typescript",
-    "cloud-devops",
-  ]);
+  const [selectedCategories, setSelectedCategories] = useState<Category[]>(allCategories);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showExplanation, setShowExplanation] = useState(false);
+  const [questionsPerCategory, setQuestionsPerCategory] = useState(10);
 
   const filteredQuestions = useMemo(() => {
-    const filtered = questions.filter((q) =>
-      selectedCategories.includes(q.category)
-    );
-    // Shuffle
-    return [...filtered].sort(() => Math.random() - 0.5);
-  }, [selectedCategories, state]);
+    const result: typeof questions = [];
+    selectedCategories.forEach((cat) => {
+      const catQuestions = questions.filter((q) => q.category === cat);
+      // Shuffle within the category and pick the first N
+      const shuffled = [...catQuestions].sort(() => Math.random() - 0.5);
+      result.push(...shuffled.slice(0, questionsPerCategory));
+    });
+    // Final shuffle to mix categories
+    return result.sort(() => Math.random() - 0.5);
+  }, [selectedCategories, state, questionsPerCategory]);
 
   const currentQuestion = filteredQuestions[currentIndex];
 
@@ -64,15 +64,28 @@ const Index = () => {
     );
   };
 
+  const toggleAllCategories = () => {
+    if (selectedCategories.length === allCategories.length) {
+      setSelectedCategories([]);
+    } else {
+      setSelectedCategories(allCategories);
+    }
+  };
+
+  const handleAddQuestions = () => {
+    setQuestionsPerCategory((prev) => Math.min(prev + 5, 30));
+  };
+
   if (state === "start") {
     return (
       <QuizStart
         selectedCategories={selectedCategories}
         onToggleCategory={toggleCategory}
+        onToggleAll={toggleAllCategories}
         onStart={handleStart}
-        totalQuestions={
-          questions.filter((q) => selectedCategories.includes(q.category)).length
-        }
+        totalQuestions={filteredQuestions.length}
+        questionsPerCategory={questionsPerCategory}
+        onAddQuestions={handleAddQuestions}
       />
     );
   }

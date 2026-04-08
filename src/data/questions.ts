@@ -11,6 +11,20 @@ export type Category =
   | "azure-devops"
   | "terraform";
 
+export const allCategories: Category[] = [
+  "js-fundamentals",
+  "js-weird",
+  "typescript",
+  "nodejs",
+  "reactjs",
+  "aws",
+  "github-actions",
+  "gcp",
+  "azure",
+  "azure-devops",
+  "terraform",
+];
+
 export interface Question {
   id: number;
   category: Category;
