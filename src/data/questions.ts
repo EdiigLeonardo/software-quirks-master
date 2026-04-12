@@ -2825,10 +2825,10 @@ export const questions: Question[] = [
     code: `gcloud run deploy my-service \\\n  --image gcr.io/my-project/my-app \\\n  --platform managed \\\n  --allow-unauthenticated \\\n  --region us-central1`,
     question: "O que é o Google Cloud Run?",
     options: [
-      "Um serviço de VMs",
-      "Uma plataforma serverless para containers",
-      "Um serviço de DNS",
-      "Um sistema de filas",
+      "Um serviço de gestão de máquinas virtuais tradicionais",
+      "Uma plataforma serverless para execução de containers",
+      "Um serviço de resolução de nomes e gestão de domínios",
+      "Um sistema de filas e processamento de mensagens",
     ],
     correctIndex: 1,
     explanation:
@@ -2840,14 +2840,14 @@ export const questions: Question[] = [
     code: `# Cloud Functions (2nd gen)\nconst functions = require('@google-cloud/functions-framework');\n\nfunctions.http('helloWorld', (req, res) => {\n  res.send('Hello, World!');\n});\n\n# Deploy\ngcloud functions deploy helloWorld \\\n  --gen2 \\\n  --runtime nodejs20 \\\n  --trigger-http \\\n  --allow-unauthenticated`,
     question: "Qual a diferença entre Cloud Functions e Cloud Run?",
     options: [
-      "São iguais",
-      "Functions é para funções individuais event-driven, Run é para containers completos",
-      "Run é deprecated",
-      "Functions é mais caro",
+      "São serviços idênticos com apenas nomes comerciais distintos",
+      "Functions é para funções event-driven, Run para containers completos",
+      "Run é um serviço legado substituído totalmente pelo Functions",
+      "Functions exige o pagamento de taxas fixas por infraestrutura",
     ],
     correctIndex: 1,
     explanation:
-      "Cloud Functions é ideal para funções simples event-driven (HTTP, Pub/Sub). Cloud Run executa containers completos com mais controle. Gen2 Functions são na verdade construídas sobre Cloud Run.",
+      "Cloud Functions é ideal para funções simples event-driven (HTTP, Pub/Sub). Cloud Run executa containers completos with mais controle. Gen2 Functions são na verdade construídas sobre Cloud Run.",
   },
   {
     id: 503,
@@ -2855,14 +2855,14 @@ export const questions: Question[] = [
     code: `# Pub/Sub\ngcloud pubsub topics create orders\ngcloud pubsub subscriptions create order-sub \\\n  --topic orders \\\n  --push-endpoint https://my-service.run.app/process`,
     question: "O que é o Cloud Pub/Sub?",
     options: [
-      "Um serviço de publicação de websites",
-      "Um serviço de messaging assíncrono para desacoplar serviços",
-      "Um serviço de DNS",
-      "Um CDN",
+      "Um serviço de hospedagem de websites estáticos",
+      "Um serviço de messaging assíncrono para desacoplar sistemas",
+      "Um serviço de gestão de certificados e domínios DNS",
+      "Um serviço de distribuição de conteúdo em cache",
     ],
     correctIndex: 1,
     explanation:
-      "Pub/Sub é um serviço de messaging global e durável. Publishers enviam mensagens para topics, subscribers recebem-nas via push ou pull. Garante at-least-once delivery e escala automaticamente.",
+      "Pub/Sub é um serviço de messaging global e durável. Publishers enviam mensagens para topics, subscribers recebem-nas via push or pull. Garante at-least-once delivery e escala automaticamente.",
   },
   {
     id: 504,
@@ -2870,10 +2870,10 @@ export const questions: Question[] = [
     code: `# BigQuery\nSELECT\n  DATE(created_at) as day,\n  COUNT(*) as orders,\n  SUM(total) as revenue\nFROM \`project.dataset.orders\`\nWHERE created_at >= '2024-01-01'\nGROUP BY day\nORDER BY day;`,
     question: "O que é o BigQuery?",
     options: [
-      "Uma base de dados relacional",
-      "Um data warehouse serverless para análise de grandes volumes de dados",
-      "Um serviço de cache",
-      "Um motor de busca",
+      "Uma base de dados relacional para transações de alta frequência",
+      "Um data warehouse serverless para análise de grandes volumes",
+      "Um serviço de cache distribuída para baixa latência",
+      "Um motor de busca para indexação de documentos",
     ],
     correctIndex: 1,
     explanation:
@@ -2885,10 +2885,10 @@ export const questions: Question[] = [
     code: `# GKE (Google Kubernetes Engine)\ngcloud container clusters create my-cluster \\\n  --zone us-central1-a \\\n  --num-nodes 3 \\\n  --enable-autoscaling \\\n  --min-nodes 1 \\\n  --max-nodes 10`,
     question: "O que é o GKE?",
     options: [
-      "Um serviço de VMs",
-      "O Kubernetes managed service da Google Cloud",
-      "Um container registry",
-      "Um serviço de CI/CD",
+      "Um serviço de criação e gestão de máquinas virtuais",
+      "O serviço managed de Kubernetes da plataforma Google Cloud",
+      "Um repositório privado para armazenamento de imagens",
+      "Um serviço de automação de integração e entrega contínua",
     ],
     correctIndex: 1,
     explanation:

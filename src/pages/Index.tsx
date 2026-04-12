@@ -12,7 +12,7 @@ const Index = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showExplanation, setShowExplanation] = useState(false);
-  const [questionsPerCategory, setQuestionsPerCategory] = useState(10);
+  const [questionsPerCategory, setQuestionsPerCategory] = useState(5);
 
   const filteredQuestions = useMemo(() => {
     const result: typeof questions = [];
