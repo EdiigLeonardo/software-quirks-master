@@ -4,6 +4,8 @@ export type Category =
   | "typescript"
   | "nodejs"
   | "reactjs"
+  | "java"
+  | "python"
   | "aws"
   | "github-actions"
   | "gcp"
@@ -17,6 +19,8 @@ export const allCategories: Category[] = [
   "typescript",
   "nodejs",
   "reactjs",
+  "java",
+  "python",
   "aws",
   "github-actions",
   "gcp",
@@ -41,6 +45,8 @@ export const categoryLabels: Record<Category, string> = {
   typescript: "TypeScript",
   nodejs: "Node.js",
   reactjs: "React.js",
+  java: "Java",
+  python: "Python",
   aws: "AWS",
   "github-actions": "GitHub Actions",
   gcp: "Google Cloud (GCP)",
@@ -55,6 +61,8 @@ export const categoryDescriptions: Record<Category, string> = {
   typescript: "Tipos, generics, utility types e type system",
   nodejs: "Event loop, streams, modules, APIs do Node.js",
   reactjs: "Hooks, state, lifecycle, patterns do React",
+  java: "OOP, JVM, streams, generics e mais",
+  python: "OOP, decorators, generators, async e mais",
   aws: "Lambda, Step Functions, API Gateway, S3, EC2 e mais",
   "github-actions": "Workflows, jobs, actions, CI/CD no GitHub",
   gcp: "Cloud Run, Pub/Sub, GKE, BigQuery e mais",
@@ -524,8 +532,7 @@ export const questions: Question[] = [
     question: "Qual é o resultado?",
     options: ["true", "false", '""', "undefined"],
     correctIndex: 1,
-    explanation:
-      'String vazia é falsy. `!""` é `true`, `!!""` é `false`.',
+    explanation: 'String vazia é falsy. `!""` é `true`, `!!""` é `false`.',
   },
   {
     id: 45,
@@ -534,8 +541,7 @@ export const questions: Question[] = [
     question: "Qual é o resultado?",
     options: ["0", "NaN", '""', "undefined"],
     correctIndex: 0,
-    explanation:
-      "O operador unário `+` converte string vazia para `0`.",
+    explanation: "O operador unário `+` converte string vazia para `0`.",
   },
   {
     id: 46,
@@ -926,15 +932,19 @@ export const questions: Question[] = [
       "number[]",
     ],
     correctIndex: 0,
-    explanation:
-      "`Record<K, V>` cria um tipo com keys K e valores do tipo V.",
+    explanation: "`Record<K, V>` cria um tipo com keys K e valores do tipo V.",
   },
   {
     id: 81,
     category: "typescript",
     code: `declare const brand: unique symbol;\ntype USD = number & { [brand]: 'USD' };\ntype EUR = number & { [brand]: 'EUR' };\nconst usd = 10 as USD;\nconst eur: EUR = usd;`,
     question: "Isto compila?",
-    options: ["Sim", "Não, tipos incompatíveis", "Depende do strict", "Runtime error"],
+    options: [
+      "Sim",
+      "Não, tipos incompatíveis",
+      "Depende do strict",
+      "Runtime error",
+    ],
     correctIndex: 1,
     explanation:
       "Branded types usam interseção com propriedades únicas para criar tipos nominais. USD e EUR são incompatíveis apesar de ambos serem numbers.",
@@ -1015,7 +1025,7 @@ export const questions: Question[] = [
     code: `const tuple = ['hello', 42] as const;\ntype First = (typeof tuple)[0];\ntype Length = (typeof tuple)['length'];`,
     question: "Quais são os tipos First e Length?",
     options: [
-      'string e number',
+      "string e number",
       '"hello" e 2',
       '"hello" e number',
       "string e 2",
@@ -1029,12 +1039,7 @@ export const questions: Question[] = [
     category: "typescript",
     code: `type ToArray<T> = T extends any ? T[] : never;\ntype R = ToArray<string | number>;`,
     question: "Qual é o tipo R?",
-    options: [
-      "(string | number)[]",
-      "string[] | number[]",
-      "never",
-      "any[]",
-    ],
+    options: ["(string | number)[]", "string[] | number[]", "never", "any[]"],
     correctIndex: 1,
     explanation:
       "Conditional types são distributivos sobre unions. Cada membro é processado separadamente: `string[] | number[]`.",
@@ -1888,7 +1893,12 @@ export const questions: Question[] = [
     category: "reactjs",
     code: `function App() {\n  const [count, setCount] = useState(0);\n  \n  function handleClick() {\n    setCount(count + 1);\n    console.log(count); // ???\n  }\n}`,
     question: "O que loga console.log(count) após setCount?",
-    options: ["O valor atualizado", "O valor anterior (0)", "undefined", "Error"],
+    options: [
+      "O valor atualizado",
+      "O valor anterior (0)",
+      "undefined",
+      "Error",
+    ],
     correctIndex: 1,
     explanation:
       "State updates no React são assíncronos. `count` é uma const no closure atual — `setCount` agenda um re-render mas não muda o valor da variável `count` no scope atual.",
@@ -1922,6 +1932,686 @@ export const questions: Question[] = [
     correctIndex: 1,
     explanation:
       "O hook `use()` do React 19 pode ler Promises (com Suspense) e Contexts. Ao contrário de outros hooks, pode ser chamado condicionalmente e dentro de loops. Simplifica data fetching e leitura de context.",
+  },
+
+  // ========== JAVA (30) ==========
+  {
+    id: 231,
+    category: "java",
+    code: `Integer a = 127;\nInteger b = 127;\nInteger c = 128;\nInteger d = 128;\nSystem.out.print((a == b) + " " + (c == d));`,
+    question: "Qual é o output?",
+    options: ["true true", "true false", "false true", "false false"],
+    correctIndex: 1,
+    explanation:
+      "A JVM faz cache de objetos Integer para valores entre -128 e 127. Para 128, novos objetos são instanciados, tornando as referências de 'c' e 'd' diferentes.",
+  },
+  {
+    id: 232,
+    category: "java",
+    code: `String s1 = "java";\nString s2 = new String("java");\nSystem.out.print((s1 == s2) + " " + s1.equals(s2));`,
+    question: "Qual é o output?",
+    options: ["true true", "false true", "true false", "false false"],
+    correctIndex: 1,
+    explanation:
+      "'s1' aponta para a String no String Pool. 'new String()' força a criação de um novo objeto no Heap. '==' compara referências, 'equals' compara conteúdo.",
+  },
+  {
+    id: 233,
+    category: "java",
+    code: `try {\n  System.out.print("A");\n  throw new RuntimeException();\n} catch (Exception e) {\n  System.out.print("B");\n} finally {\n  System.out.print("C");\n}`,
+    question: "Qual é a sequência impressa?",
+    options: ["AB", "AC", "ABC", "BC"],
+    correctIndex: 2,
+    explanation:
+      "O bloco 'try' executa primeiro, a exceção é capturada pelo 'catch', e o bloco 'finally' sempre executa após o try/catch.",
+  },
+  {
+    id: 234,
+    category: "java",
+    code: `class Parent {\n  void show() { System.out.print("Parent"); }\n}\nclass Child extends Parent {\n  void show() { System.out.print("Child"); }\n}\nParent p = new Child();\np.show();`,
+    question: "Qual é o output?",
+    options: ["Parent", "Child", "Compilação falha", "RuntimeError"],
+    correctIndex: 1,
+    explanation:
+      "Java suporta polimorfismo em tempo de execução. O método é chamado com base no tipo real do objeto instanciado (Child), não no tipo de referência (Parent).",
+  },
+  {
+    id: 235,
+    category: "java",
+    code: `public static void modify(int x, int[] arr) {\n  x = 10;\n  arr[0] = 10;\n}\nint n = 5;\nint[] a = {5};\nmodify(n, a);\nSystem.out.print(n + " " + a[0]);`,
+    question: "Qual é o output?",
+    options: ["5 5", "10 10", "5 10", "10 5"],
+    correctIndex: 2,
+    explanation:
+      "Java passa tudo por valor. Para tipos primitivos, uma cópia do valor é passada. Para arrays/objetos, uma cópia da referência é passada, permitindo alterar o conteúdo do objeto original.",
+  },
+  {
+    id: 236,
+    category: "java",
+    code: `class Test {\n  static int x = 10;\n  public static void main(String[] args) {\n    Test t = null;\n    System.out.print(t.x);\n  }\n}`,
+    question: "O que acontece ao executar o código?",
+    options: [
+      "Imprime 10",
+      "NullPointerException",
+      "Compilação falha",
+      "Imprime 0",
+    ],
+    correctIndex: 0,
+    explanation:
+      "Variáveis estáticas pertencem à classe, não à instância. O compilador ignora a referência nula e acessa 'Test.x' diretamente.",
+  },
+  {
+    id: 237,
+    category: "java",
+    code: `String s = "a" + "b";\ns.concat("c");\nSystem.out.print(s);`,
+    question: "Qual é o output?",
+    options: ["abc", "ab", "a", "c"],
+    correctIndex: 1,
+    explanation:
+      "Objetos String são imutáveis em Java. O método 'concat' retorna uma nova String, mas não altera a variável 's' original.",
+  },
+  {
+    id: 238,
+    category: "java",
+    code: `int i = 1;\ni = i++;\nSystem.out.print(i);`,
+    question: "Qual é o output?",
+    options: ["1", "2", "0", "Compilação falha"],
+    correctIndex: 0,
+    explanation:
+      "O operador pós-incremento avalia o valor original antes de incrementar. Durante a atribuição 'i = i++', o valor original (1) é salvo e depois reatribuído a 'i', sobrescrevendo o incremento.",
+  },
+  {
+    id: 239,
+    category: "java",
+    code: `double a = 0.1;\ndouble b = 0.2;\nSystem.out.print(a + b == 0.3);`,
+    question: "Qual é o output?",
+    options: ["true", "false", "Compilação falha", "RuntimeError"],
+    correctIndex: 1,
+    explanation:
+      "Assim como no JS, Java usa aritmética de ponto flutuante IEEE 754. '0.1 + 0.2' resulta em '0.30000000000000004', que não é igual a '0.3'.",
+  },
+  {
+    id: 240,
+    category: "java",
+    code: `short x = 10;\nx = x + 1;\nSystem.out.print(x);`,
+    question: "O que acontece ao compilar e rodar o código?",
+    options: [
+      "Imprime 11",
+      "Erro de compilação por perda de precisão",
+      "RuntimeError",
+      "Imprime 10",
+    ],
+    correctIndex: 1,
+    explanation:
+      "A expressão 'x + 1' promove automaticamente o resultado para o tipo 'int'. Tentar atribuir um 'int' de volta para um 'short' sem cast explícito causa erro de compilação.",
+  },
+  {
+    id: 241,
+    category: "java",
+    code: `List<Integer> list = new ArrayList<>(List.of(1, 2, 3));\nlist.remove(1);\nSystem.out.print(list);`,
+    question: "Qual é o output?",
+    options: ["[2, 3]", "[1, 3]", "[1, 2]", "IndexOutOfBoundsException"],
+    correctIndex: 1,
+    explanation:
+      "O método 'remove(int index)' tem prioridade sobre 'remove(Object o)'. Portanto, o elemento no índice 1 (o valor 2) é removido.",
+  },
+  {
+    id: 242,
+    category: "java",
+    code: `interface A { default void msg() { System.out.print("A"); } }\ninterface B { default void msg() { System.out.print("B"); } }\nclass C implements A, B {}`,
+    question: "O que acontece ao compilar a classe C?",
+    options: [
+      "Compila com sucesso",
+      "Erro de compilação devido ao conflito de herança múltipla",
+      "Compila e adota o método de A",
+      "Compila e adota o método de B",
+    ],
+    correctIndex: 1,
+    explanation:
+      "O Java proíbe a herança múltipla de implementações conflitantes. Se duas interfaces possuem o mesmo método padrão, a classe filha deve sobrescrevê-lo explicitamente para resolver o conflito.",
+  },
+  {
+    id: 243,
+    category: "java",
+    code: `StringBuilder sb1 = new StringBuilder("Java");\nStringBuilder sb2 = new StringBuilder("Java");\nSystem.out.print(sb1.equals(sb2));`,
+    question: "Qual é o output?",
+    options: ["true", "false", "Compilação falha", "ClassCastException"],
+    correctIndex: 1,
+    explanation:
+      "A classe 'StringBuilder' não sobrescreve o método 'equals()' da classe Object. Portanto, ela compara referências de memória, que são diferentes.",
+  },
+  {
+    id: 244,
+    category: "java",
+    code: `try {\n  return 1;\n} finally {\n  return 2;\n}`,
+    question:
+      "Qual é o valor retornado se esse bloco for executado dentro de um método?",
+    options: ["1", "2", "Erro de compilação", "Ambos são retornados"],
+    correctIndex: 1,
+    explanation:
+      "O bloco 'finally' sempre executa antes de o controle sair do método. Um comando 'return' dentro do 'finally' descarta e substitui qualquer 'return' ou exceção disparada no 'try'.",
+  },
+  {
+    id: 245,
+    category: "java",
+    code: `System.out.print(Math.min(Double.MIN_VALUE, 0.0));`,
+    question: "Qual é o output?",
+    options: ["0.0", "Double.MIN_VALUE", "Erro de compilação", "-4.9E-324"],
+    correctIndex: 0,
+    explanation:
+      "Ao contrário de 'Integer.MIN_VALUE', 'Double.MIN_VALUE' representa o menor valor numérico real POSITIVO estritamente maior que zero. Logo, 0.0 é menor que ele.",
+  },
+  {
+    id: 246,
+    category: "java",
+    code: `int x = 5;\nboolean b = (x < 4) && (++x > 5);\nSystem.out.print(x);`,
+    question: "Qual é o output?",
+    options: ["5", "6", "false", "true"],
+    correctIndex: 0,
+    explanation:
+      "O operador '&&' é um operador de curto-circuito. Como a primeira expressão '(x < 4)' é falsa, a segunda parte nunca é avaliada e 'x' não sofre incremento.",
+  },
+  {
+    id: 247,
+    category: "java",
+    code: `class Base {\n  private void print() { System.out.print("Base"); }\n}\nclass Derived extends Base {\n  public void print() { System.out.print("Derived"); }\n}\nBase obj = new Derived();\nobj.print();`,
+    question: "O que acontece?",
+    options: [
+      "Imprime 'Derived'",
+      "Imprime 'Base'",
+      "Erro de compilação",
+      "RuntimeError",
+    ],
+    correctIndex: 2,
+    explanation:
+      "Métodos privados na classe Base não são visíveis para herança ou polimorfismo. O compilador tenta validar a chamada 'obj.print()' pelo tipo da classe Base, disparando erro de compilação por acesso privado.",
+  },
+  {
+    id: 248,
+    category: "java",
+    code: `System.out.print("A" + 'B' + 5);`,
+    question: "Qual é o output?",
+    options: ["AB5", "A675", "137", "Compilação falha"],
+    correctIndex: 0,
+    explanation:
+      "A concatenação começa da esquerda para a direita. 'String + char' resulta em String ('AB'). Em seguida, 'String + int' concatena como String ('AB5').",
+  },
+  {
+    id: 249,
+    category: "java",
+    code: `System.out.print('A' + 'B');`,
+    question: "Qual é o output?",
+    options: ["AB", "131", "6566", "Erro de compilação"],
+    correctIndex: 1,
+    explanation:
+      "Quando caracteres binários ('char') são somados usando o operador '+', eles sofrem promoção numérica para 'int'. Seus valores ASCII (65 + 66) são somados.",
+  },
+  {
+    id: 250,
+    category: "java",
+    code: `float f = 3.14;\nSystem.out.print(f);`,
+    question: "O que acontece ao compilar o código?",
+    options: [
+      "Imprime 3.14",
+      "Erro de compilação por conversão de tipos",
+      "Imprime 3",
+      "RuntimeError",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Literais numéricos com ponto decimal são tratados nativamente como 'double' em Java. Atribuir um double a um float exige um sufixo 'f' (3.14f) ou cast explícito.",
+  },
+  {
+    id: 251,
+    category: "java",
+    code: `int[] arr = new int[5];\nSystem.out.print(arr[4]);`,
+    question: "Qual é o output?",
+    options: ["0", "null", "undefined", "ArrayIndexOutOfBoundsException"],
+    correctIndex: 0,
+    explanation:
+      "Arrays em Java inicializam seus elementos com valores padrão de fábrica. Para inteiros primitivos ('int'), o valor inicial padrão é 0.",
+  },
+  {
+    id: 252,
+    category: "java",
+    code: `String s = null;\nswitch (s) {\n  case "null" -> System.out.print("1");\n  default -> System.out.print("2");\n}`,
+    question: "O que acontece ao rodar o bloco?",
+    options: [
+      "Imprime '1'",
+      "Imprime '2'",
+      "NullPointerException",
+      "Erro de compilação",
+    ],
+    correctIndex: 2,
+    explanation:
+      "A estrutura de controle 'switch' avalia a expressão interna chamando o método de desreferenciamento. Avaliar uma String nula lança NullPointerException em tempo de execução.",
+  },
+  {
+    id: 253,
+    category: "java",
+    code: `Thread t = new Thread(() -> System.out.print("Run"));\nt.run();`,
+    question: "O que acontece ao chamar o método run() diretamente?",
+    options: [
+      "Inicia uma nova thread paralela",
+      "Executa sincronamente na thread atual",
+      "Gera uma IllegalThreadStateException",
+      "Erro de compilação",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Para iniciar uma nova thread de processamento paralela em segundo plano, deve-se chamar o método 'start()'. Invocar 'run()' funciona como uma chamada síncrona ordinária de método comum.",
+  },
+  {
+    id: 254,
+    category: "java",
+    code: `final List<String> list = new ArrayList<>();\nlist.add("Java");\nSystem.out.print(list.size());`,
+    question: "Qual é o comportamento esperado?",
+    options: [
+      "Imprime 1",
+      "Erro de compilação por modificar variável final",
+      "UnsupportedOperationException",
+      "Imprime 0",
+    ],
+    correctIndex: 0,
+    explanation:
+      "A palavra-chave 'final' impede a reatribuição da variável para outra referência de objeto. Ela não impede a modificação do estado interno ou do conteúdo mutável do próprio objeto referenciado.",
+  },
+  {
+    id: 255,
+    category: "java",
+    code: `int x = 010;\nSystem.out.print(x);`,
+    question: "Qual é o output?",
+    options: ["10", "8", "0", "Erro de compilação"],
+    correctIndex: 1,
+    explanation:
+      "Em Java, literais inteiros iniciados com o dígito zero '0' são interpretados nativamente como números no sistema numérico Octal (base 8). Logo, '010' em octal equivale a 8 em decimal.",
+  },
+  {
+    id: 256,
+    category: "java",
+    code: `Map<String, String> map = new HashMap<>();\nmap.put(null, "A");\nmap.put(null, "B");\nSystem.out.print(map.get(null));`,
+    question: "Qual é o output?",
+    options: ["A", "B", "NullPointerException", "null"],
+    correctIndex: 1,
+    explanation:
+      "Diferente de estruturas como Hashtable ou TreeMap, 'HashMap' aceita chaves nulas ('null'). Inserir uma nova entrada sob a mesma chave sobrescreve o valor armazenado anteriormente.",
+  },
+  {
+    id: 257,
+    category: "java",
+    code: `class A {}\nclass B extends A {}\nA[] array = new B[3];\narray[0] = new A();`,
+    question: "O que acontece na última linha em tempo de execução?",
+    options: [
+      "Funciona normalmente",
+      "ArrayStoreException",
+      "ClassCastException",
+      "Erro de compilação",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Embora o tipo da referência em tempo de compilação permita ('A'), o array real alocado em memória é do tipo 'B[]'. Inserir uma instância da classe pai em um array de subclasse viola a tipagem de segurança e lança ArrayStoreException.",
+  },
+  {
+    id: 258,
+    category: "java",
+    code: `System.out.print(1 / 0.0);`,
+    question: "Qual é o output?",
+    options: ["ArithmeticException", "Infinity", "NaN", "Erro de compilação"],
+    correctIndex: 1,
+    explanation:
+      "A divisão inteira por zero lança ArithmeticException. No entanto, operações matemáticas envolvendo números reais em ponto flutuante divididos por zero retornam infinito positivo ou negativo.",
+  },
+  {
+    id: 259,
+    category: "java",
+    code: `int a = 10, b = 20;\nSystem.out.print(a > b ? 10.0 : 20);`,
+    question: "Qual é o tipo e valor impresso?",
+    options: [
+      "20 (int)",
+      "20.0 (double)",
+      "10.0 (double)",
+      "Erro de compilação",
+    ],
+    correctIndex: 1,
+    explanation:
+      "O operador ternário unifica o tipo dos operandos de retorno para evitar incompatibilidades. Como um operando é 'double' (10.0) e o outro é 'int' (20), o int sofre promoção para double.",
+  },
+  {
+    id: 260,
+    category: "java",
+    code: `String s = "Hello";\ns.replace('l', 'w');\nSystem.out.print(s);`,
+    question: "Qual é o output?",
+    options: ["Hewwo", "Hello", "Hewlo", "Erro de compilação"],
+    correctIndex: 1,
+    explanation:
+      "Strings são imutáveis. O método 'replace' produz uma nova string tratada e modificada, mas não substitui ou altera o conteúdo da referência original 's'.",
+  },
+
+  // ========== PYTHON (30) ==========
+  {
+    id: 261,
+    category: "python",
+    code: `def func(x, l=[]):\n    l.append(x)\n    return l\nprint(func(1))\nprint(func(2))`,
+    question: "Qual é o output final?",
+    options: ["[1] [2]", "[1] [1, 2]", "[1, 2] [1, 2]", "[1] []"],
+    correctIndex: 1,
+    explanation:
+      "Argumentos opcionais mutáveis (como listas) são avaliados apenas uma vez, na definição da função. Chamadas subsequentes compartilham e modificam a mesma lista em memória.",
+  },
+  {
+    id: 262,
+    category: "python",
+    code: `a = [1, 2, 3]\nb = a\na.append(4)\nprint(b)`,
+    question: "Qual é o output?",
+    options: ["[1, 2, 3]", "[1, 2, 3, 4]", "AttributeError", "[4]"],
+    correctIndex: 1,
+    explanation:
+      "A atribuição 'b = a' não faz uma cópia da lista, apenas copia a referência ao objeto. Modificações em 'a' refletem diretamente em 'b'.",
+  },
+  {
+    id: 263,
+    category: "python",
+    code: `a = (1, 2, [3, 4])\na[2].append(5)\nprint(a)`,
+    question: "O que acontece?",
+    options: [
+      "TypeError (tupla imutável)",
+      "(1, 2, [3, 4, 5])",
+      "(1, 2, [3, 4], 5)",
+      "ValueError",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Tuplas são imutáveis quanto às suas referências de dados internas, mas os objetos mutáveis armazenados dentro de uma tupla (como uma lista) podem ser alterados livremente.",
+  },
+  {
+    id: 264,
+    category: "python",
+    code: `x = 10\ndef foo():\n    x += 1\nfoo()`,
+    question: "O que acontece ao chamar a função foo()?",
+    options: ["x vira 11", "UnboundLocalError", "TypeError", "SyntaxError"],
+    correctIndex: 1,
+    explanation:
+      "Como há uma atribuição ('x += 1') no escopo da função, o Python trata 'x' como variável local. Tentar ler seu valor antes da inicialização dispara UnboundLocalError.",
+  },
+  {
+    id: 265,
+    category: "python",
+    code: `print(type(1 / 1))`,
+    question: "Qual é a classe retornada?",
+    options: [
+      "<class 'int'>",
+      "<class 'float'>",
+      "<class 'double'>",
+      "SyntaxError",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Em Python 3, o operador de divisão única '/' sempre realiza uma divisão decimal (float), mesmo quando os operandos dividem-se de forma exata.",
+  },
+  {
+    id: 266,
+    category: "python",
+    code: `a = [1, 2, 3]\nb = a[:]\nprint(a is b, a == b)`,
+    question: "Qual é o output?",
+    options: ["True True", "False False", "False True", "True False"],
+    correctIndex: 2,
+    explanation:
+      "O operador de fatiamento '[:]' cria uma cópia rasa (shallow copy) da lista original. Logo, referências mudam ('is' falso), mas os elementos internos são iguais ('==' verdadeiro).",
+  },
+  {
+    id: 267,
+    category: "python",
+    code: `l = [lambda x: x * i for i in range(3)]\nprint([m(2) for m in l])`,
+    question: "Qual é o output?",
+    options: ["[0, 2, 4]", "[4, 4, 4]", "[0, 0, 0]", "[2, 2, 2]"],
+    correctIndex: 1,
+    explanation:
+      "Closures em Python usam 'late binding' (ligação tardia). A variável 'i' é procurada em tempo de execução. Quando as funções rodam, o loop já terminou e 'i' vale 2. Então 2 * 2 = 4 para todas.",
+  },
+  {
+    id: 268,
+    category: "python",
+    code: `d = {(1, 2): "A", [3, 4]: "B"}`,
+    question: "O que acontece ao tentar instanciar o dicionário?",
+    options: [
+      "Cria com sucesso",
+      "TypeError: unhashable type: 'list'",
+      "KeyError",
+      "ValueError",
+    ],
+    correctIndex: 1,
+    explanation:
+      "As chaves de um dicionário em Python precisam ser hasháveis (imutáveis). Uma lista ('list') é mutável e não pode ser usada como chave, ao contrário de uma tupla.",
+  },
+  {
+    id: 269,
+    category: "python",
+    code: `print(True == 1, True is 1)`,
+    question: "Qual é o output?",
+    options: ["True True", "False False", "True False", "False True"],
+    correctIndex: 2,
+    explanation:
+      "A classe 'bool' herda diretamente de 'int' em Python, logo 'True == 1' avalia como verdadeiro. Contudo, são objetos distintos em memória, o que torna o teste de identidade 'is' falso.",
+  },
+  {
+    id: 270,
+    category: "python",
+    code: `a = 256\nb = 256\nc = 257\nd = 257\nprint(a is b, c is d)`,
+    question: "Qual é o output?",
+    options: ["True True", "True False", "False False", "False True"],
+    correctIndex: 1,
+    explanation:
+      "O Python otimiza o uso de memória pré-alocando pequenos inteiros no intervalo entre -5 e 256. Fora dessa faixa, novos objetos com IDs diferentes são gerados a cada atribuição.",
+  },
+  {
+    id: 271,
+    category: "python",
+    code: `def test():\n    try:\n        return 1\n    finally:\n        return 2\nprint(test())`,
+    question: "Qual é o valor retornado?",
+    options: ["1", "2", "None", "SyntaxError"],
+    correctIndex: 1,
+    explanation:
+      "Assim como em outras linguagens, a cláusula 'finally' garante execução prioritária imediata. Caso inclua uma instrução de retorno ('return'), ela substitui a do bloco 'try'.",
+  },
+  {
+    id: 272,
+    category: "python",
+    code: `x = [1, 2, 3]\nx.extend([4, 5])\nprint(len(x))`,
+    question: "Qual é o tamanho final de x?",
+    options: ["4", "5", "3", "AttributeError"],
+    correctIndex: 1,
+    explanation:
+      "O método 'extend' desestrutura o iterável passado por argumento e anexa cada um de seus elementos individualmente à lista alvo, aumentando o tamanho para 5.",
+  },
+  {
+    id: 273,
+    category: "python",
+    code: `x = [1, 2, 3]\nx.append([4, 5])\nprint(len(x))`,
+    question: "Qual é o tamanho final de x?",
+    options: ["5", "4", "3", "2"],
+    correctIndex: 1,
+    explanation:
+      "O método 'append' anexa o objeto passado de forma íntegra e literal como um único e novo elemento no final da lista, totalizando 4 itens.",
+  },
+  {
+    id: 274,
+    category: "python",
+    code: `print("ab".join(["1", "2"]))`,
+    question: "Qual é o output?",
+    options: ["1ab2", "ab1ab2", "12ab", "ab12"],
+    correctIndex: 0,
+    explanation:
+      "O método 'join' é invocado a partir do caractere delimitador. Ele insere a string base de conexão ENTRE os elementos contidos no iterável alvo.",
+  },
+  {
+    id: 275,
+    category: "python",
+    code: `print(round(2.5), round(3.5))`,
+    question: "Qual é o output?",
+    options: ["3 4", "2 4", "2 3", "3 3"],
+    correctIndex: 1,
+    explanation:
+      "O Python adota o arredondamento bancário (IEEE 754), onde valores terminados exatamente em .5 são arredondados para o número PAR inteiro mais próximo.",
+  },
+  {
+    id: 276,
+    category: "python",
+    code: `s = {1, 2, 3}\nprint(s[0])`,
+    question: "O que acontece?",
+    options: [
+      "Imprime 1",
+      "TypeError: 'set' object is not subscriptable",
+      "KeyError",
+      "IndexError",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Conjuntos ('set') em Python representam coleções não ordenadas de elementos únicos. Eles não dão suporte a indexação posicional ou fatiamento de dados.",
+  },
+  {
+    id: 277,
+    category: "python",
+    code: `print(bool([]), bool([0]))`,
+    question: "Qual é o output?",
+    options: ["False False", "True True", "False True", "True False"],
+    correctIndex: 2,
+    explanation:
+      "Coleções vazias (como listas, strings ou dicionários sem elementos) possuem valor booleano 'False'. Uma lista contendo um elemento (mesmo que seja zero) avalia como 'True'.",
+  },
+  {
+    id: 278,
+    category: "python",
+    code: `a = 1\nexec("a = 2")\nprint(a)`,
+    question: "Qual é o output?",
+    options: ["1", "2", "SyntaxError", "None"],
+    correctIndex: 1,
+    explanation:
+      "A função nativa 'exec' interpreta e executa dinamicamente blocos de código Python contidos em strings no escopo local corrente.",
+  },
+  {
+    id: 279,
+    category: "python",
+    code: `x = 1 or 2\ny = 1 and 2\nprint(x, y)`,
+    question: "Qual é o output?",
+    options: ["True True", "1 2", "1 1", "2 1"],
+    correctIndex: 1,
+    explanation:
+      "Operadores lógicos em Python avaliam em curto-circuito e retornam o próprio valor do objeto avaliado, não apenas um booleano. '1 or 2' para no 1; '1 and 2' precisa avaliar e retornar o 2.",
+  },
+  {
+    id: 280,
+    category: "python",
+    code: `l = [1, 2, 3]\nprint(l[5:])`,
+    question: "Qual é o output?",
+    options: ["IndexError", "[]", "None", "Null"],
+    correctIndex: 1,
+    explanation:
+      "Tentar acessar um índice isolado inexistente causa IndexError. No entanto, o fatiamento de strings e listas (slicing) falha de forma graciosa retornando uma lista vazia.",
+  },
+  {
+    id: 281,
+    category: "python",
+    code: `class A:\n    val = 1\nclass B(A):\n    pass\nB.val = 2\nprint(A.val)`,
+    question: "Qual é o output?",
+    options: ["1", "2", "AttributeError", "None"],
+    correctIndex: 0,
+    explanation:
+      "Modificar um atributo de classe diretamente na subclasse 'B' cria um novo atributo exclusivo no escopo dela, sem afetar o atributo correspondente da classe pai 'A'.",
+  },
+  {
+    id: 282,
+    category: "python",
+    code: `print(any([]), all([]))`,
+    question: "Qual é o output?",
+    options: ["False True", "False False", "True True", "True False"],
+    correctIndex: 0,
+    explanation:
+      "A função 'any()' em um iterável vazio retorna 'False' por não encontrar itens verdadeiros. Já 'all()' retorna 'True' de forma vazia (vacuous truth) por não haver itens falsos.",
+  },
+  {
+    id: 283,
+    category: "python",
+    code: `x = [1, 2, 3]\ny = x\nx = x + [4]\nprint(y)`,
+    question: "Qual é o conteúdo de y?",
+    options: ["[1, 2, 3]", "[1, 2, 3, 4]", "TypeError", "[]"],
+    correctIndex: 0,
+    explanation:
+      "O operador '+' cria e aloca uma NOVA lista resultante em memória, associando-a à variável 'x'. A referência mantida em 'y' permanece intocada apontando para a lista antiga.",
+  },
+  {
+    id: 284,
+    category: "python",
+    code: `x = [1, 2, 3]\ny = x\nx += [4]\nprint(y)`,
+    question: "Qual é o conteúdo de y?",
+    options: ["[1, 2, 3]", "[1, 2, 3, 4]", "TypeError", "[]"],
+    correctIndex: 1,
+    explanation:
+      "Diferente do operador '+', o operador '+=' em listas estende a lista existente 'in-place' (equivalente a rodar .extend()). Assim, as mudanças refletem em 'y'.",
+  },
+  {
+    id: 285,
+    category: "python",
+    code: `print(type((1)))`,
+    question: "Qual é o tipo retornado?",
+    options: [
+      "<class 'tuple'>",
+      "<class 'int'>",
+      "<class 'tuple_int'>",
+      "SyntaxError",
+    ],
+    correctIndex: 1,
+    explanation:
+      "Parênteses isolados servem apenas para agrupamento de expressões matemáticas. Para criar uma tupla de elemento único, é obrigatório inserir uma vírgula final: '(1,)'.",
+  },
+  {
+    id: 286,
+    category: "python",
+    code: `a = "Python"\nprint(a[::-1])`,
+    question: "Qual é o output?",
+    options: ["Python", "P", "nohtyP", "IndexError"],
+    correctIndex: 2,
+    explanation:
+      "Passar o passo (step) negativo igual a '-1' instrui o mecanismo de fatiamento a ler a sequência de caracteres ao contrário, invertendo a string.",
+  },
+  {
+    id: 287,
+    category: "python",
+    code: `def f(*args, **kwargs):\n    print(len(args), len(kwargs))\nf(1, 2, a=3)`,
+    question: "Qual é o output?",
+    options: ["3 0", "2 1", "1 2", "AttributeError"],
+    correctIndex: 1,
+    explanation:
+      "'*args' captura argumentos posicionais avulsos em uma tupla (1, 2). '**kwargs' mapeia argumentos nomeados estruturando um dicionário {'a': 3}.",
+  },
+  {
+    id: 288,
+    category: "python",
+    code: `a = {1, 2}\nb = {2, 3}\nprint(a & b)`,
+    question: "Qual é o output?",
+    options: ["{1, 2, 3}", "{2}", "set()", "TypeError"],
+    correctIndex: 1,
+    explanation:
+      "O operador '&' calcula a interseção matemática entre dois conjuntos ('set'), gerando um novo conjunto composto apenas por elementos presentes em ambos simultaneamente.",
+  },
+  {
+    id: 289,
+    category: "python",
+    code: `x = 5\nprint(10 > x > 2)`,
+    question: "Qual é o output?",
+    options: ["True", "False", "TypeError", "SyntaxError"],
+    correctIndex: 0,
+    explanation:
+      "O Python aceita encadeamento comparativo direto de operadores. A expressão equivale de forma implícita a avaliar '(10 > x) and (x > 2)'.",
+  },
+  {
+    id: 290,
+    category: "python",
+    code: `print(list("abc"))`,
+    question: "Qual é o output?",
+    options: ["['abc']", "['a', 'b', 'c']", "AttributeError", "[]"],
+    correctIndex: 1,
+    explanation:
+      "O construtor 'list()' recebe um iterável e desmembra cada um de seus elementos lógicos. Como strings são iteráveis caractere por caractere, gera uma lista de letras isoladas.",
   },
 
   // ========== AWS (30) ==========
@@ -4578,7 +5268,7 @@ export const questions: Question[] = [
     ],
     correctIndex: 1,
     explanation:
-      "`count = condition ? 1 : 0` é o idiom para recursos condicionais. Quando count é 0, o recurso não é criado. Pode-se também usar `for_each = var.enabled ? toset([\"one\"]) : toset([])` para o mesmo efeito.",
+      '`count = condition ? 1 : 0` é o idiom para recursos condicionais. Quando count é 0, o recurso não é criado. Pode-se também usar `for_each = var.enabled ? toset(["one"]) : toset([])` para o mesmo efeito.',
   },
   {
     id: 828,

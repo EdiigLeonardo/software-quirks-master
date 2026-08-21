@@ -1,24 +1,20 @@
-import { Question, categoryLabels, Category } from "@/data/questions";
+import { categoryLabels } from "@/data/questions";
+import { useQuizStore } from "@/store/quizStore";
 
-interface Props {
-  questions: Question[];
-  answers: Record<number, number>;
-  onRestart: () => void;
-}
+export function QuizResults() {
+  const { filteredQuestions, answers, restartQuiz } = useQuizStore();
 
-export function QuizResults({ questions, answers, onRestart }: Props) {
-  const total = questions.length;
-  const correct = questions.filter(
-    (q) => answers[q.id] === q.correctIndex
+  const total = filteredQuestions.length;
+  const correct = filteredQuestions.filter(
+    (q) => answers[q.id] === q.correctIndex,
   ).length;
   const percentage = Math.round((correct / total) * 100);
 
-  // Stats by category
-  const categories = [...new Set(questions.map((q) => q.category))];
+  const categories = [...new Set(filteredQuestions.map((q) => q.category))];
   const statsByCategory = categories.map((cat) => {
-    const catQuestions = questions.filter((q) => q.category === cat);
+    const catQuestions = filteredQuestions.filter((q) => q.category === cat);
     const catCorrect = catQuestions.filter(
-      (q) => answers[q.id] === q.correctIndex
+      (q) => answers[q.id] === q.correctIndex,
     ).length;
     return {
       category: cat,
@@ -43,10 +39,11 @@ export function QuizResults({ questions, answers, onRestart }: Props) {
           <h2 className="text-2xl font-bold font-mono glow-text mb-2">
             {correct} / {total}
           </h2>
-          <p className="text-muted-foreground text-sm">{percentage}% corretas</p>
+          <p className="text-muted-foreground text-sm">
+            {percentage}% corretas
+          </p>
         </div>
 
-        {/* Score bar */}
         <div className="w-full h-3 bg-secondary rounded-full overflow-hidden mb-8">
           <div
             className="h-full rounded-full progress-fill"
@@ -56,13 +53,12 @@ export function QuizResults({ questions, answers, onRestart }: Props) {
                 percentage >= 70
                   ? "hsl(var(--correct))"
                   : percentage >= 50
-                  ? "hsl(var(--warning))"
-                  : "hsl(var(--incorrect))",
+                    ? "hsl(var(--warning))"
+                    : "hsl(var(--incorrect))",
             }}
           />
         </div>
 
-        {/* Category breakdown */}
         <div className="space-y-3 mb-8">
           <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
             // Por categoria
@@ -90,14 +86,13 @@ export function QuizResults({ questions, answers, onRestart }: Props) {
           ))}
         </div>
 
-        {/* Wrong answers review */}
-        {questions.some((q) => answers[q.id] !== q.correctIndex) && (
+        {filteredQuestions.some((q) => answers[q.id] !== q.correctIndex) && (
           <div className="mb-8">
             <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-3">
               // Revise os erros
             </p>
             <div className="space-y-3 max-h-64 overflow-y-auto pr-1">
-              {questions
+              {filteredQuestions
                 .filter((q) => answers[q.id] !== q.correctIndex)
                 .map((q) => (
                   <div
@@ -127,7 +122,7 @@ export function QuizResults({ questions, answers, onRestart }: Props) {
         )}
 
         <button
-          onClick={onRestart}
+          onClick={restartQuiz}
           className="w-full py-3 px-6 rounded-lg bg-primary text-primary-foreground font-mono font-bold text-sm tracking-wide hover:opacity-90 transition-opacity glow-green"
         >
           Jogar Novamente
