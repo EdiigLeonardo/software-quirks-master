@@ -1,4 +1,4 @@
-# JavaScript Quirks
+# Software Quirks
 
 A collection of JavaScript quirks and browser inconsistencies, documented and demonstrated in a web application.
 
