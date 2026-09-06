@@ -8,13 +8,20 @@ const shuffle = <T>(items: T[]) => [...items].sort(() => Math.random() - 0.5);
 const buildFilteredQuestions = (
   selectedCategories: Category[],
   questionsPerCategory: number,
+  seenQuestionIds: number[] = [],
 ): Question[] => {
   if (selectedCategories.length === 0) return [];
 
   const result: Question[] = [];
 
   selectedCategories.forEach((cat) => {
-    const catQuestions = questions.filter((q) => q.category === cat);
+    let catQuestions = questions.filter((q) => q.category === cat);
+    if (seenQuestionIds.length > 0) {
+      const unseen = catQuestions.filter((q) => !seenQuestionIds.includes(q.id));
+      if (unseen.length > 0) {
+        catQuestions = unseen;
+      }
+    }
     result.push(...shuffle(catQuestions).slice(0, questionsPerCategory));
   });
 
