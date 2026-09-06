@@ -5549,5 +5549,3102 @@ export const questions: Question[] = [
     ],
     correctIndex: 0,
     explanation: "DTO desconecta o contrato público da API da estrutura interna de tabelas/entidades JPA/EF Core."
+  },
+  // ========== PREP TOPICS (01-perguntas-por-topico.md) ==========
+  {
+    id: 2001,
+    category: "java",
+    code: "// Fundamentos - Q1\n// JAVA",
+    question: "Diferença entre == e .equals() em objetos?",
+    options: [
+      "== compara referências (identidade); .equals() compara conteúdo/valor. Para objetos/Strings, usa sempre .equals().",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "== compara referências (identidade); .equals() compara conteúdo/valor. Para objetos/Strings, usa sempre .equals()."
+  },
+  {
+    id: 2002,
+    category: "java",
+    code: "// Fundamentos - Q2\n// JAVA",
+    question: "O que é autoboxing/unboxing?",
+    options: [
+      "Autoboxing converte primitivo→wrapper (int→Integer) automaticamente; unboxing faz o inverso. Custa performance em massa (loops).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Autoboxing converte primitivo→wrapper (int→Integer) automaticamente; unboxing faz o inverso. Custa performance em massa (loops)."
+  },
+  {
+    id: 2003,
+    category: "java",
+    code: "String, StringBuilder, StringBuffer",
+    question: "Diferença entre String, StringBuilder e StringBuffer?",
+    options: [
+      "String é imutável; StringBuilder mutável e não thread-safe (rápido); StringBuffer mutável e thread-safe (sincronizado, mais lento).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "String é imutável; StringBuilder mutável e não thread-safe (rápido); StringBuffer mutável e thread-safe (sincronizado, mais lento)."
+  },
+  {
+    id: 2004,
+    category: "java",
+    code: "// Fundamentos - Q4\n// JAVA",
+    question: "O que é uma interface funcional?",
+    options: [
+      "Interface com um único método abstrato (ex: Runnable, Comparator). Permite lambdas.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Interface com um único método abstrato (ex: Runnable, Comparator). Permite lambdas."
+  },
+  {
+    id: 2005,
+    category: "java",
+    code: "// Fundamentos - Q5\n// JAVA",
+    question: "Diferença entre classe abstrata e interface?",
+    options: [
+      "Classe abstrata: estado + métodos concretos, herança única. Interface: sem estado (métodos default à parte), implementação múltipla.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Classe abstrata: estado + métodos concretos, herança única. Interface: sem estado (métodos default à parte), implementação múltipla."
+  },
+  {
+    id: 2006,
+    category: "java",
+    code: "list.stream().filter(x -> x > 5).collect(toList())",
+    question: "O que são streams em Java? Exemplo?",
+    options: [
+      "API para processar coleções de forma declarativa. Ex: list.stream().filter(x -> x > 5).collect(toList()).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "API para processar coleções de forma declarativa. Ex: list.stream().filter(x -> x > 5).collect(toList())."
+  },
+  {
+    id: 2007,
+    category: "java",
+    code: "List vs Set vs Map",
+    question: "Diferença entre List, Set e Map?",
+    options: [
+      "List ordenada com duplicados; Set sem duplicados; Map pares chave-valor.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "List ordenada com duplicados; Set sem duplicados; Map pares chave-valor."
+  },
+  {
+    id: 2008,
+    category: "java",
+    code: "// Fundamentos - Q8\n// JAVA",
+    question: "O que é o Garbage Collector, a alto nível?",
+    options: [
+      "Processo automático que liberta memória de objetos sem referências, evitando gestão manual.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Processo automático que liberta memória de objetos sem referências, evitando gestão manual."
+  },
+  {
+    id: 2009,
+    category: "java",
+    code: "Checked (IOException) vs Unchecked (RuntimeException)",
+    question: "Diferença entre checked e unchecked exceptions?",
+    options: [
+      "Checked (IOException) exigem declaração/tratamento em compile-time; unchecked (RuntimeException) não.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Checked (IOException) exigem declaração/tratamento em compile-time; unchecked (RuntimeException) não."
+  },
+  {
+    id: 2010,
+    category: "java",
+    code: "Optional<String> opt = Optional.ofNullable(val);",
+    question: "O que é Optional e para que serve?",
+    options: [
+      "Wrapper para valor que pode não existir, evitando null e NullPointerException.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Wrapper para valor que pode não existir, evitando null e NullPointerException."
+  },
+  {
+    id: 2011,
+    category: "java",
+    code: "final vs finally vs finalize",
+    question: "Diferença entre final, finally e finalize?",
+    options: [
+      "final impede reatribuição/override; finally executa sempre após try/catch; finalize() (obsoleto) corre antes do GC recolher o objeto.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "final impede reatribuição/override; finally executa sempre após try/catch; finalize() (obsoleto) corre antes do GC recolher o objeto."
+  },
+  {
+    id: 2012,
+    category: "java",
+    code: "List<T> list = new ArrayList<>();",
+    question: "O que são generics em Java?",
+    options: [
+      "Tipos parametrizáveis (List<T>) com type-safety em compile-time.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Tipos parametrizáveis (List<T>) com type-safety em compile-time."
+  },
+  {
+    id: 2013,
+    category: "java",
+    code: "ArrayList vs LinkedList",
+    question: "Diferença entre ArrayList e LinkedList?",
+    options: [
+      "ArrayList: array dinâmico, acesso rápido por índice. LinkedList: lista ligada, inserção/remoção rápida nas pontas.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "ArrayList: array dinâmico, acesso rápido por índice. LinkedList: lista ligada, inserção/remoção rápida nas pontas."
+  },
+  {
+    id: 2014,
+    category: "java",
+    code: "@Override\npublic int hashCode() { return Objects.hash(id); }",
+    question: "O que é hashCode() e porque anda com equals()?",
+    options: [
+      "Código numérico usado por estruturas hash. Objetos iguais por equals() devem ter o mesmo hashCode().",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Código numérico usado por estruturas hash. Objetos iguais por equals() devem ter o mesmo hashCode()."
+  },
+  {
+    id: 2015,
+    category: "java",
+    code: "Function<Integer, Integer> square = x -> x * 2;",
+    question: "O que são lambda expressions?",
+    options: [
+      "Funções anónimas concisas, usadas com interfaces funcionais/Streams. Ex: x -> x * 2.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Funções anónimas concisas, usadas com interfaces funcionais/Streams. Ex: x -> x * 2."
+  },
+  {
+    id: 2016,
+    category: "java",
+    code: "HashMap vs TreeMap",
+    question: "Diferença entre HashMap e TreeMap?",
+    options: [
+      "HashMap: sem ordem, O(1) médio. TreeMap: ordenado por chave, O(log n).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "HashMap: sem ordem, O(1) médio. TreeMap: ordenado por chave, O(log n)."
+  },
+  {
+    id: 2017,
+    category: "java",
+    code: "list.stream().map(String::toUpperCase)",
+    question: "O que é method reference (::)?",
+    options: [
+      "Sintaxe curta para referenciar um método como lambda. Ex: String::toUpperCase.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Sintaxe curta para referenciar um método como lambda. Ex: String::toUpperCase."
+  },
+  {
+    id: 2018,
+    category: "java",
+    code: "throw new IllegalArgumentException();\nvs\npublic void doWork() throws IOException",
+    question: "Diferença entre throw e throws?",
+    options: [
+      "throw lança a exceção; throws declara na assinatura que o método pode lançá-la.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "throw lança a exceção; throws declara na assinatura que o método pode lançá-la."
+  },
+  {
+    id: 2019,
+    category: "java",
+    code: "public final class ImmutablePerson { private final String name; ... }",
+    question: "O que é imutabilidade? Como criar uma classe imutável?",
+    options: [
+      "Objeto cujo estado não muda após criação: campos final, sem setters, devolve cópias de coleções internas.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Objeto cujo estado não muda após criação: campos final, sem setters, devolve cópias de coleções internas."
+  },
+  {
+    id: 2020,
+    category: "java",
+    code: "public static int count;\nvs\npublic int count;",
+    question: "Diferença entre static e instância?",
+    options: [
+      "static pertence à classe (partilhado); instância pertence a cada objeto.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "static pertence à classe (partilhado); instância pertence a cada objeto."
+  },
+  {
+    id: 2021,
+    category: "java",
+    code: "String s1 = \"a\"; String s2 = \"a\"; console.log(s1 == s2);",
+    question: "String s1=\"a\"; String s2=\"a\"; s1==s2 → true/false? Porquê?",
+    options: [
+      "Costuma dar true por interning de literais, mas não é garantido (ex: new String()). Nunca usar == para Strings.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Costuma dar true por interning de literais, mas não é garantido (ex: new String()). Nunca usar == para Strings."
+  },
+  {
+    id: 2022,
+    category: "java",
+    code: "list.forEach(item -> list.remove(item));",
+    question: "Modificar uma List dentro de um forEach — que erro?",
+    options: [
+      "ConcurrentModificationException — usa Iterator.remove() ou uma cópia.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "ConcurrentModificationException — usa Iterator.remove() ou uma cópia."
+  },
+  {
+    id: 2023,
+    category: "java",
+    code: "Integer a = 127, b = 127; (a == b)\nInteger c = 200, d = 200; (c == d)",
+    question: "Integer a=127,b=127; a==b → e com 200?",
+    options: [
+      "Com 127: true (cache -128 a 127). Com 200: false (fora do cache).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Com 127: true (cache -128 a 127). Com 200: false (fora do cache)."
+  },
+  {
+    id: 2024,
+    category: "java",
+    code: "Collections.unmodifiableList(list)\nvs\nList.of(1, 2, 3)",
+    question: "Collections.unmodifiableList vs List.of()?",
+    options: [
+      "unmodifiableList só \"esconde\" mutabilidade (a original pode mudar); List.of() é verdadeiramente imutável.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "unmodifiableList só \"esconde\" mutabilidade (a original pode mudar); List.of() é verdadeiramente imutável."
+  },
+  {
+    id: 2025,
+    category: "java",
+    code: "@Override\npublic boolean equals(Object o) { ... }\n// Sem hashCode() sobreposto",
+    question: "Porque é perigoso sobrepor equals() sem hashCode()?",
+    options: [
+      "Quebra o contrato de HashMap/HashSet — podes não encontrar um objeto que acabaste de inserir.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Quebra o contrato de HashMap/HashSet — podes não encontrar um objeto que acabaste de inserir."
+  },
+  {
+    id: 2026,
+    category: "java",
+    code: "try (FileReader fr = new FileReader(\"file.txt\")) { ... }",
+    question: "try-with-resources garante o quê a mais que try/finally?",
+    options: [
+      "Fecha automaticamente o recurso Closeable mesmo com exceção, sem finally manual.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Fecha automaticamente o recurso Closeable mesmo com exceção, sem finally manual."
+  },
+  {
+    id: 2027,
+    category: "java",
+    code: "Overload vs Override",
+    question: "Overload vs override — compile-time ou runtime?",
+    options: [
+      "Overload resolve em compile-time (assinatura); override em runtime (polimorfismo).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Overload resolve em compile-time (assinatura); override em runtime (polimorfismo)."
+  },
+  {
+    id: 2028,
+    category: "java",
+    code: "try { throw new Exception(\"Try\"); } finally { throw new Exception(\"Finally\"); }",
+    question: "O que acontece a uma exceção lançada dentro de finally?",
+    options: [
+      "A exceção do finally \"engole\" a original do try, salvo tratamento explícito.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "A exceção do finally \"engole\" a original do try, salvo tratamento explícito."
+  },
+  {
+    id: 2029,
+    category: "java",
+    code: "Stream<String> s = list.stream();\ns.forEach(System.out::println);\ns.filter(...);",
+    question: "Um Stream pode ser reutilizado após operação terminal?",
+    options: [
+      "Não — Stream é single-use; após operação terminal lança IllegalStateException se reutilizado.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Não — Stream é single-use; após operação terminal lança IllegalStateException se reutilizado."
+  },
+  {
+    id: 2030,
+    category: "java",
+    code: "synchronized(lock) { ... }\nvs\nReentrantLock lock = new ReentrantLock();",
+    question: "synchronized vs ReentrantLock?",
+    options: [
+      "synchronized: simples, bloqueio automático. ReentrantLock: timeout, interrupção, fairness configurável.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "synchronized: simples, bloqueio automático. ReentrantLock: timeout, interrupção, fairness configurável."
+  },
+  {
+    id: 2031,
+    category: "java",
+    code: "int a = 1 / 0;\nvs\ndouble b = 1.0 / 0.0;",
+    question: "Porque int/0 dá exceção mas double/0 dá Infinity?",
+    options: [
+      "int/0 lança ArithmeticException; double/0 segue IEEE 754 (Infinity, ou NaN para 0.0/0.0).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "int/0 lança ArithmeticException; double/0 segue IEEE 754 (Infinity, ou NaN para 0.0/0.0)."
+  },
+  {
+    id: 2032,
+    category: "java",
+    code: "Double.NaN == Double.NaN",
+    question: "Double.NaN == Double.NaN → resultado?",
+    options: [
+      "Sempre false — usa Double.isNaN() ou .equals().",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Sempre false — usa Double.isNaN() ou .equals()."
+  },
+  {
+    id: 2033,
+    category: "java",
+    code: "public static void print() { ... }",
+    question: "Métodos static podem ser overridden?",
+    options: [
+      "Não — static é resolvido por tipo declarado (hiding), sem polimorfismo real.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Não — static é resolvido por tipo declared (hiding), sem polimorfismo real."
+  },
+  {
+    id: 2034,
+    category: "java",
+    code: "public void update(Person p) { p.setName(\"Ana\"); }",
+    question: "Java passa por valor ou referência (objetos)?",
+    options: [
+      "Sempre por valor — mas para objetos o \"valor\" é a referência, por isso parece passagem por referência ao mutar internamente.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Sempre por valor — mas para objetos o \"valor\" é a referência, por isso parece passagem por referência ao mutar internamente."
+  },
+  {
+    id: 2035,
+    category: "java",
+    code: "String name = \"Ana\";\nRunnable r = () -> System.out.println(name);",
+    question: "O que é \"effectively final\" e porque as lambdas exigem isso?",
+    options: [
+      "Lambdas só capturam variáveis locais que não mudam depois de inicializadas (evita inconsistências de fecho).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Lambdas só capturam variáveis locais que não mudam depois de inicializadas (evita inconsistências de fecho)."
+  },
+  {
+    id: 2036,
+    category: "java",
+    code: "try { ... } catch (Exception e) { ... }",
+    question: "Que problema traz catch (Exception e) genérico?",
+    options: [
+      "Esconde o tipo real do erro, dificulta tratamento específico, mascara bugs — apanha exceções específicas.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Esconde o tipo real do erro, dificulta tratamento específico, mascara bugs — apanha exceções específicas."
+  },
+  {
+    id: 2037,
+    category: "java",
+    code: "Comparable vs Comparator",
+    question: "Comparable vs Comparator?",
+    options: [
+      "Comparable: ordenação natural (compareTo, dentro da classe). Comparator: ordenação externa/custom (compare).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Comparable: ordenação natural (compareTo, dentro da classe). Comparator: ordenação externa/custom (compare)."
+  },
+  {
+    id: 2038,
+    category: "java",
+    code: "obj.wait(); // Fora de bloco synchronized",
+    question: "O que acontece a uma thread que faz wait() sem synchronized?",
+    options: [
+      "IllegalMonitorStateException — wait() só dentro de bloco sincronizado no mesmo monitor.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "IllegalMonitorStateException — wait() só dentro de bloco sincronizado no mesmo monitor."
+  },
+  {
+    id: 2039,
+    category: "java",
+    code: "for (String s : list) { list.remove(s); }",
+    question: "Porque acontece ConcurrentModificationException?",
+    options: [
+      "Modificas estruturalmente a coleção enquanto a percorres com um iterator que não suporta essa alteração concorrente.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Modificas estruturalmente a coleção enquanto a percorres com um iterator que não suporta essa alteração concorrente."
+  },
+  {
+    id: 2040,
+    category: "java",
+    code: "Deep copy vs Shallow copy",
+    question: "Deep copy vs shallow copy?",
+    options: [
+      "Shallow copy: copia só referências (objetos internos partilhados). Deep copy: cópias independentes de tudo, incluindo aninhados.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Shallow copy: copia só referências (objetos internos partilhados). Deep copy: cópias independentes de tudo, incluindo aninhados."
+  },
+  {
+    id: 2041,
+    category: "java",
+    code: "AtomicInteger count = new AtomicInteger(0);",
+    question: "Como desenhar um contador thread-safe partilhado?",
+    options: [
+      "AtomicInteger, ou sincronizar o incremento com synchronized/ReentrantLock, evitando race conditions.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "AtomicInteger, ou sincronizar o incremento com synchronized/ReentrantLock, evitando race conditions."
+  },
+  {
+    id: 2042,
+    category: "java",
+    code: "if (...) { if (...) { if (...) { ... } } }",
+    question: "Como refatorar um método com 5 if aninhados?",
+    options: [
+      "Extrair condições em métodos com nomes claros, early return/guard clauses, ou polimorfismo/strategy pattern.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Extrair condições em métodos com nomes claros, early return/guard clauses, ou polimorfismo/strategy pattern."
+  },
+  {
+    id: 2043,
+    category: "java",
+    code: "Map<K, CacheEntry<V>>",
+    question: "Como implementar um cache em memória com TTL?",
+    options: [
+      "Map<K, CacheEntry<V>> com valor + timestamp de expiração; validar no get(), ou usar Caffeine/Guava.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Map<K, CacheEntry<V>> com valor + timestamp de expiração; validar no get(), ou usar Caffeine/Guava."
+  },
+  {
+    id: 2044,
+    category: "java",
+    code: "stream().collect(groupingBy(Item::getCategory))",
+    question: "1M de objetos: filtrar e agrupar por categoria — abordagem com Streams?",
+    options: [
+      "stream().collect(groupingBy(Item::getCategory)); considerar .parallelStream() se o volume justificar.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "stream().collect(groupingBy(Item::getCategory)); considerar .parallelStream() se o volume justificar."
+  },
+  {
+    id: 2045,
+    category: "java",
+    code: "OutOfMemoryError: Java heap space",
+    question: "Como investigar um OutOfMemoryError intermitente em produção?",
+    options: [
+      "Heap dumps, procurar leaks (coleções sem limpeza, listeners não removidos), rever config JVM, profiling (VisualVM).",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Heap dumps, procurar leaks (coleções sem limpeza, listeners não removidos), rever config JVM, profiling (VisualVM)."
+  },
+  {
+    id: 2046,
+    category: "java",
+    code: "Retry + Exponential Backoff",
+    question: "Como implementar retry com backoff exponencial numa chamada externa?",
+    options: [
+      "Retry com espera crescente (1s, 2s, 4s...) e limite de tentativas, idealmente via Resilience4j.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Retry com espera crescente (1s, 2s, 4s...) e limite de tentativas, idealmente via Resilience4j."
+  },
+  {
+    id: 2047,
+    category: "java",
+    code: "User.builder().name(\"Ana\").build();",
+    question: "Como implementar o padrão Builder?",
+    options: [
+      "Métodos encadeados que devolvem this, terminando em .build() que valida e cria o objeto imutável.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Métodos encadeados que devolvem this, terminando em .build() que valida e cria o objeto imutável."
+  },
+  {
+    id: 2048,
+    category: "java",
+    code: "Clock clock = Clock.systemUTC();",
+    question: "Como testar unitariamente código que usa LocalDateTime.now()?",
+    options: [
+      "Injetar um Clock em vez de chamar LocalDateTime.now() direto, permitindo mockar tempo nos testes.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Injetar um Clock em vez de chamar LocalDateTime.now() direto, permitindo mockar tempo nos testes."
+  },
+  {
+    id: 2049,
+    category: "java",
+    code: "public record UserDTO(String name, String email) {}",
+    question: "record vs classe normal para um DTO — quando cada um?",
+    options: [
+      "record: DTO imutável, só dados (equals/hashCode/toString grátis). Classe normal: lógica extra ou mutabilidade.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "record: DTO imutável, só dados (equals/hashCode/toString grátis). Classe normal: lógica extra ou mutabilidade."
+  },
+  {
+    id: 2050,
+    category: "java",
+    code: "interface Listener { void onEvent(); }",
+    question: "Como implementar um observer pattern simples em Java puro?",
+    options: [
+      "Interface Listener com onEvent(); o \"subject\" mantém lista de listeners e notifica-os.",
+      "Ocorre exceção em tempo de execução (NullPointerException / ClassCastException)",
+      "Comportamento idêntico sem qualquer diferença funcional ou de memória",
+      "É uma funcionalidade obsoleta descontinuada no Java 17+"
+    ],
+    correctIndex: 0,
+    explanation: "Interface Listener com onEvent(); o \"subject\" mantém lista de listeners e notifica-os."
+  },
+  {
+    id: 2101,
+    category: "springboot",
+    code: "@SpringBootApplication",
+    question: "O que é auto-configuration?",
+    options: [
+      "Configura beans automaticamente com base no classpath (ex: spring-boot-starter-web → servidor embutido).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Configura beans automaticamente com base no classpath (ex: spring-boot-starter-web → servidor embutido)."
+  },
+  {
+    id: 2102,
+    category: "springboot",
+    code: "@Component vs @Service vs @Repository vs @Controller",
+    question: "@Component vs @Service vs @Repository vs @Controller?",
+    options: [
+      "@Component: genérico. @Service: lógica de negócio. @Repository: acesso a dados (traduz exceções de BD). @Controller: camada web.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@Component: genérico. @Service: lógica de negócio. @Repository: acesso a dados (traduz exceções de BD). @Controller: camada web."
+  },
+  {
+    id: 2103,
+    category: "springboot",
+    code: "@SpringBootApplication\npublic class App { ... }",
+    question: "O que faz @SpringBootApplication?",
+    options: [
+      "Combina @Configuration + @EnableAutoConfiguration + @ComponentScan — ponto de entrada da app.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Combina @Configuration + @EnableAutoConfiguration + @ComponentScan — ponto de entrada da app."
+  },
+  {
+    id: 2104,
+    category: "springboot",
+    code: "@RestController vs @Controller",
+    question: "@RestController vs @Controller?",
+    options: [
+      "@RestController = @Controller + @ResponseBody (JSON direto); @Controller sozinho devolve normalmente uma view.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@RestController = @Controller + @ResponseBody (JSON direto); @Controller sozinho devolve normalmente uma view."
+  },
+  {
+    id: 2105,
+    category: "springboot",
+    code: "application.properties / application.yml",
+    question: "Para que serve application.properties/.yml?",
+    options: [
+      "Ficheiro de configuração da app (portas, ligação a BD, variáveis por ambiente).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Ficheiro de configuração da app (portas, ligação a BD, variáveis por ambiente)."
+  },
+  {
+    id: 2106,
+    category: "springboot",
+    code: "@Autowired private Service service;",
+    question: "O que é injeção de dependências no Spring?",
+    options: [
+      "Dependências fornecidas de fora pelo container Spring, em vez da classe as criar — reduz acoplamento.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Dependências fornecidas de fora pelo container Spring, em vez da classe as criar — reduz acoplamento."
+  },
+  {
+    id: 2107,
+    category: "springboot",
+    code: "Constructor injection vs Field injection",
+    question: "@Autowired no construtor vs no campo — qual preferes?",
+    options: [
+      "Construtor é preferido: permite final, facilita testes sem container, evita dependências circulares escondidas.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Construtor é preferido: permite final, facilita testes sem container, evita dependências circulares escondidas."
+  },
+  {
+    id: 2108,
+    category: "springboot",
+    code: "@Bean\npublic RestTemplate restTemplate() { return new RestTemplate(); }",
+    question: "O que é um @Bean?",
+    options: [
+      "Método @Bean numa classe @Configuration cujo retorno é registado como bean gerido.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Método @Bean numa classe @Configuration cujo retorno é registado como bean gerido."
+  },
+  {
+    id: 2109,
+    category: "springboot",
+    code: "@RequestParam vs @PathVariable vs @RequestBody",
+    question: "@RequestParam vs @PathVariable vs @RequestBody?",
+    options: [
+      "@RequestParam: query string. @PathVariable: parte da URL. @RequestBody: corpo JSON.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@RequestParam: query string. @PathVariable: parte da URL. @RequestBody: corpo JSON."
+  },
+  {
+    id: 2110,
+    category: "springboot",
+    code: "public interface UserRepository extends JpaRepository<User, Long> {}",
+    question: "O que é Spring Data JPA?",
+    options: [
+      "Abstração sobre JPA que gera repositórios automaticamente a partir de interfaces (ex: findByEmail).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Abstração sobre JPA que gera repositórios automaticamente a partir de interfaces (ex: findByEmail)."
+  },
+  {
+    id: 2111,
+    category: "springboot",
+    code: "@Entity\n@Table(name = \"users\")",
+    question: "@Entity vs @Table?",
+    options: [
+      "@Entity marca a classe como mapeada; @Table define o nome da tabela (opcional).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@Entity marca a classe como mapeada; @Table define o nome da tabela (opcional)."
+  },
+  {
+    id: 2112,
+    category: "springboot",
+    code: "@Transactional\npublic void processOrder() { ... }",
+    question: "O que faz @Transactional?",
+    options: [
+      "Garante que um conjunto de operações na BD é atómico — tudo ou nada.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Garante que um conjunto de operações na BD é atómico — tudo ou nada."
+  },
+  {
+    id: 2113,
+    category: "springboot",
+    code: "@GetMapping(\"/users\")\nvs\n@RequestMapping(value=\"/users\", method=RequestMethod.GET)",
+    question: "@GetMapping vs @RequestMapping(method=GET)?",
+    options: [
+      "Equivalentes — @GetMapping é atalho de @RequestMapping(method=GET).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Equivalentes — @GetMapping é atalho de @RequestMapping(method=GET)."
+  },
+  {
+    id: 2114,
+    category: "springboot",
+    code: "@ControllerAdvice\npublic class GlobalExceptionHandler { ... }",
+    question: "Para que serve @ControllerAdvice?",
+    options: [
+      "Centraliza tratamento de exceções para todos os controllers, evitando try/catch repetido.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Centraliza tratamento de exceções para todos os controllers, evitando try/catch repetido."
+  },
+  {
+    id: 2115,
+    category: "springboot",
+    code: "@Valid vs @Validated",
+    question: "@Valid vs @Validated?",
+    options: [
+      "@Valid: Bean Validation padrão (JSR-380). @Validated: do Spring, suporta grupos de validação.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@Valid: Bean Validation padrão (JSR-380). @Validated: do Spring, suporta grupos de validação."
+  },
+  {
+    id: 2116,
+    category: "springboot",
+    code: "spring.profiles.active=dev",
+    question: "O que são profiles no Spring Boot?",
+    options: [
+      "Ativa configurações/beans diferentes por ambiente (application-{profile}.yml).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Ativa configurações/beans diferentes por ambiente (application-{profile}.yml)."
+  },
+  {
+    id: 2117,
+    category: "springboot",
+    code: "springdoc-openapi-starter-webmvc-ui",
+    question: "Como se integra Swagger/OpenAPI num Spring Boot?",
+    options: [
+      "Biblioteca (ex: springdoc-openapi) gera documentação OpenAPI automaticamente a partir das anotações dos controllers.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Biblioteca (ex: springdoc-openapi) gera documentação OpenAPI automaticamente a partir das anotações dos controllers."
+  },
+  {
+    id: 2118,
+    category: "springboot",
+    code: "return ResponseEntity.ok(user);\nvs\nreturn user;",
+    question: "ResponseEntity<T> vs devolver o objeto direto?",
+    options: [
+      "ResponseEntity<T>: controlo total de status/headers/corpo. Objeto direto: assume sempre 200 OK.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "ResponseEntity<T>: controlo total de status/headers/corpo. Objeto direto: assume sempre 200 OK."
+  },
+  {
+    id: 2119,
+    category: "springboot",
+    code: "@ExceptionHandler(UserNotFoundException.class)",
+    question: "O que faz @ExceptionHandler?",
+    options: [
+      "Trata um tipo específico de exceção lançada num controller.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Trata um tipo específico de exceção lançada num controller."
+  },
+  {
+    id: 2120,
+    category: "springboot",
+    code: "management.endpoints.web.exposure.include=health,info,metrics",
+    question: "O que é o Actuator?",
+    options: [
+      "Endpoints de monitorização (health, metrics, info) prontos a usar — úteis para observabilidade.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Endpoints de monitorização (health, metrics, info) prontos a usar — úteis para observabilidade."
+  },
+  {
+    id: 2121,
+    category: "springboot",
+    code: "@Autowired private Service service;",
+    question: "Porque injeção por campo é má prática?",
+    options: [
+      "Dificulta testes (sem injetar mocks facilmente), esconde dependências, impede campos final.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Dificulta testes (sem injetar mocks facilmente), esconde dependências, impede campos final."
+  },
+  {
+    id: 2122,
+    category: "springboot",
+    code: "@Autowired private PaymentService service; // 2 beans PaymentService",
+    question: "Dois beans do mesmo tipo sem @Qualifier — o que acontece?",
+    options: [
+      "NoUniqueBeanDefinitionException — precisa de @Qualifier ou @Primary.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "NoUniqueBeanDefinitionException — precisa de @Qualifier ou @Primary."
+  },
+  {
+    id: 2123,
+    category: "springboot",
+    code: "@Scope(\"singleton\") vs @Scope(\"prototype\")",
+    question: "Bean singleton vs prototype?",
+    options: [
+      "Singleton (default): uma instância partilhada. Prototype: nova instância a cada injeção/pedido.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Singleton (default): uma instância partilhada. Prototype: nova instância a cada injeção/pedido."
+  },
+  {
+    id: 2124,
+    category: "springboot",
+    code: "public void a() { this.b(); }\n@Transactional public void b() { ... }",
+    question: "Porque @Transactional numa chamada interna à mesma classe não funciona?",
+    options: [
+      "@Transactional é implementado via proxy — chamadas internas (this.metodo()) não passam pelo proxy, transação ignorada.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@Transactional é implementado via proxy — chamadas internas (this.metodo()) não passam pelo proxy, transação ignorada."
+  },
+  {
+    id: 2125,
+    category: "springboot",
+    code: "N+1 select problem em JPA",
+    question: "O que é o problema N+1 e como identificá-lo?",
+    options: [
+      "Carregar N entidades gera 1 query extra por entidade para relações lazy — identifica-se nos logs SQL ou stats do Hibernate.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Carregar N entidades gera 1 query extra por entidade para relações lazy — identifica-se nos logs SQL ou stats do Hibernate."
+  },
+  {
+    id: 2126,
+    category: "springboot",
+    code: "@Autowired private final UserRepository repo;",
+    question: "@Autowired num campo final — dá erro?",
+    options: [
+      "Sim, erro de compilação — campos final têm de ser inicializados no construtor.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Sim, erro de compilação — campos final têm de ser inicializados no construtor."
+  },
+  {
+    id: 2127,
+    category: "springboot",
+    code: "repo.save(entity)\nvs\nrepo.saveAndFlush(entity)",
+    question: "save() vs saveAndFlush()?",
+    options: [
+      "save(): pode adiar sincronização com a BD. saveAndFlush(): força escrita imediata.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "save(): pode adiar sincronização com a BD. saveAndFlush(): força escrita imediata."
+  },
+  {
+    id: 2128,
+    category: "springboot",
+    code: "@GetMapping(\"/users\")\npublic List<UserEntity> getUsers() { return repo.findAll(); }",
+    question: "Porque devolver a entidade JPA direto na API é anti-padrão?",
+    options: [
+      "Acopla a API à estrutura interna, expõe campos sensíveis, dificulta evolução — usa DTOs.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Acopla a API à estrutura interna, expõe campos sensíveis, dificulta evolução — usa DTOs."
+  },
+  {
+    id: 2129,
+    category: "springboot",
+    code: "@Async\npublic void doBackground() { throw new RuntimeException(); }",
+    question: "Exceção dentro de um método @Async — o que acontece?",
+    options: [
+      "Por default é \"engolida\" silenciosamente — precisa de AsyncUncaughtExceptionHandler.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Por default é \"engolida\" silenciosamente — precisa de AsyncUncaughtExceptionHandler."
+  },
+  {
+    id: 2130,
+    category: "springboot",
+    code: "@PostMapping(\"/users\")\npublic void create(@RequestBody UserDto dto) { ... }",
+    question: "@RequestBody sem required=false e sem corpo — que erro?",
+    options: [
+      "400 Bad Request se faltar/for inválido, sem required=false.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "400 Bad Request se faltar/for inválido, sem required=false."
+  },
+  {
+    id: 2131,
+    category: "springboot",
+    code: "@PreAuthorize(\"hasRole('ADMIN')\")",
+    question: "Porque um endpoint pode dar 403 mesmo com @PreAuthorize \"certo\"?",
+    options: [
+      "Autenticação (quem és) e autorização (o que podes) são passos diferentes — podes estar autenticado sem a role certa.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Autenticação (quem és) e autorização (o que podes) são passos diferentes — podes estar autenticado sem a role certa."
+  },
+  {
+    id: 2132,
+    category: "springboot",
+    code: "@OneToMany(fetch = FetchType.LAZY)",
+    question: "O que é lazy loading no JPA e que exceção comum causa?",
+    options: [
+      "Carregamento diferido de relações; fora de sessão/transação aberta → LazyInitializationException.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Carregamento diferido de relações; fora de sessão/transação aberta → LazyInitializationException."
+  },
+  {
+    id: 2133,
+    category: "springboot",
+    code: "CrudRepository vs JpaRepository vs PagingAndSortingRepository",
+    question: "CrudRepository vs JpaRepository vs PagingAndSortingRepository?",
+    options: [
+      "CrudRepository: CRUD básico. JpaRepository: adiciona batch/flush. PagingAndSortingRepository: paginação/ordenação.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "CrudRepository: CRUD básico. JpaRepository: adiciona batch/flush. PagingAndSortingRepository: paginação/ordenação."
+  },
+  {
+    id: 2134,
+    category: "springboot",
+    code: "@RestController\npublic class Controller { // Lógica complexa de negócio no endpoint }",
+    question: "Porque é má prática lógica de negócio no Controller?",
+    options: [
+      "Mistura responsabilidades, dificulta testes/reutilização — lógica de negócio pertence à camada de serviço.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Mistura responsabilidades, dificulta testes/reutilização — lógica de negócio pertence à camada de serviço."
+  },
+  {
+    id: 2135,
+    category: "springboot",
+    code: "@GetMapping(\"/api\") em 2 métodos do mesmo controller",
+    question: "Dois endpoints com o mesmo @RequestMapping — o que acontece?",
+    options: [
+      "AmbiguousMappingException no arranque.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "AmbiguousMappingException no arranque."
+  },
+  {
+    id: 2136,
+    category: "springboot",
+    code: "@Valid DTO vs SQL constraints",
+    question: "@Valid no DTO vs constraints na BD — papel de cada um?",
+    options: [
+      "@Valid: valida forma dos dados antes de tocar na BD. Constraints de BD: última linha de defesa (integridade).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@Valid: valida forma dos dados antes de tocar na BD. Constraints de BD: última linha de defesa (integridade)."
+  },
+  {
+    id: 2137,
+    category: "springboot",
+    code: "@Transactional(readOnly = true)",
+    question: "Porque @Transactional(readOnly=true) pode melhorar performance?",
+    options: [
+      "Evita overhead de gestão de transação de escrita, pode otimizar acesso a dados.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Evita overhead de gestão de transação de escrita, pode otimizar acesso a dados."
+  },
+  {
+    id: 2138,
+    category: "springboot",
+    code: "@CrossOrigin(origins = \"*\")",
+    question: "O que é CORS e como configurar num Spring Boot API?",
+    options: [
+      "Restrição do browser a pedidos entre origens diferentes; configura-se com @CrossOrigin ou CorsConfigurationSource global.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Restrição do browser a pedidos entre origens diferentes; configura-se com @CrossOrigin ou CorsConfigurationSource global."
+  },
+  {
+    id: 2139,
+    category: "springboot",
+    code: "HTTP 401 vs HTTP 403",
+    question: "401 vs 403 — sabes distinguir na prática?",
+    options: [
+      "401: não autenticado. 403: autenticado mas sem permissão.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "401: não autenticado. 403: autenticado mas sem permissão."
+  },
+  {
+    id: 2140,
+    category: "springboot",
+    code: "@SpringBootTest vs Unit Test",
+    question: "Porque @SpringBootTest é mais lento que um teste unitário simples?",
+    options: [
+      "Sobem o contexto Spring completo (todos os beans), ao contrário de um teste unitário isolado com mocks.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Sobem o contexto Spring completo (todos os beans), ao contrário de um teste unitário isolado com mocks."
+  },
+  {
+    id: 2141,
+    category: "springboot",
+    code: "GET/POST/PUT/DELETE /pedidos",
+    question: "Como desenhar endpoints REST + Swagger para um recurso \"Pedido\" com CRUD?",
+    options: [
+      "GET/POST/PUT/DELETE /pedidos, DTOs entrada/saída, anotações Swagger (@Operation, @ApiResponse), @Valid.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "GET/POST/PUT/DELETE /pedidos, DTOs entrada/saída, anotações Swagger (@Operation, @ApiResponse), @Valid."
+  },
+  {
+    id: 2142,
+    category: "springboot",
+    code: "Pageable pageable = PageRequest.of(page, size, Sort.by(\"name\"));",
+    question: "Como implementar paginação e ordenação numa listagem?",
+    options: [
+      "Pageable do Spring Data (Page<T> findAll(Pageable)), via query params (page, size, sort).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Pageable do Spring Data (Page<T> findAll(Pageable)), via query params (page, size, sort)."
+  },
+  {
+    id: 2143,
+    category: "springboot",
+    code: "@ExceptionHandler(MethodArgumentNotValidException.class)",
+    question: "Como padronizar o formato de erro de validação em toda a API?",
+    options: [
+      "@ControllerAdvice global que captura MethodArgumentNotValidException e devolve erro padronizado (código, mensagem, campo).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@ControllerAdvice global que captura MethodArgumentNotValidException e devolve erro padronizado (código, mensagem, campo)."
+  },
+  {
+    id: 2144,
+    category: "springboot",
+    code: "@PreAuthorize(\"hasRole('ADMIN')\")",
+    question: "Como restringir um endpoint só a role \"ADMIN\"?",
+    options: [
+      "@PreAuthorize(\"hasRole('ADMIN')\") combinado com Spring Security e filtro de autenticação (JWT).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "@PreAuthorize(\"hasRole('ADMIN')\") combinado com Spring Security e filtro de autenticação (JWT)."
+  },
+  {
+    id: 2145,
+    category: "springboot",
+    code: "REST vs Kafka/RabbitMQ",
+    question: "REST síncrono vs mensageria entre dois microserviços — como decidir?",
+    options: [
+      "REST síncrono para pedido-resposta imediato; mensageria (Kafka/RabbitMQ) para desacoplamento/assíncrono.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "REST síncrono para pedido-resposta imediato; mensageria (Kafka/RabbitMQ) para desacoplamento/assíncrono."
+  },
+  {
+    id: 2146,
+    category: "springboot",
+    code: "Strangler Fig Pattern",
+    question: "Como migrar gradualmente um monólito para microserviços?",
+    options: [
+      "Strangler pattern: extrair um módulo de cada vez, começando pelos menos acoplados, coexistindo via API/eventos.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Strangler pattern: extrair um módulo de cada vez, começando pelos menos acoplados, coexistindo via API/eventos."
+  },
+  {
+    id: 2147,
+    category: "springboot",
+    code: "Idempotency-Key header",
+    question: "Como tornar um endpoint idempotente?",
+    options: [
+      "Chave de idempotência enviada pelo cliente, guardada e verificada antes de reprocessar.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Chave de idempotência enviada pelo cliente, guardada e verificada antes de reprocessar."
+  },
+  {
+    id: 2148,
+    category: "springboot",
+    code: "Logback JSON encoder",
+    question: "Como configurar logging estruturado (JSON) para debug em produção?",
+    options: [
+      "Logback/SLF4J com encoder JSON (timestamp, nível, trace ID), integrado com stack de logs (ELK/Loki).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Logback/SLF4J com encoder JSON (timestamp, nível, trace ID), integrado com stack de logs (ELK/Loki)."
+  },
+  {
+    id: 2149,
+    category: "springboot",
+    code: "OpenAPI generator + Pact",
+    question: "Como desenhar testes de contrato backend↔frontend com base no Swagger?",
+    options: [
+      "Gerar cliente TypeScript a partir do OpenAPI (openapi-generator) + testes de contrato (Pact).",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Gerar cliente TypeScript a partir do OpenAPI (openapi-generator) + testes de contrato (Pact)."
+  },
+  {
+    id: 2150,
+    category: "springboot",
+    code: "Production-only bug investigation",
+    question: "Bug só reproduzível em produção — como investigar?",
+    options: [
+      "Reproduzir em staging com dados/config semelhantes, rever logs estruturados, comparar diferenças de configuração/versão.",
+      "Lança NoSuchBeanDefinitionException no momento de arranque do ApplicationContext",
+      "Exige anotação extra @Autowired em todas as propriedades privadas",
+      "Apenas se aplica se o servidor embutido for o Tomcat"
+    ],
+    correctIndex: 0,
+    explanation: "Reproduzir em staging com dados/config semelhantes, rever logs estruturados, comparar diferenças de configuração/versão."
+  },
+  {
+    id: 2201,
+    category: "angular",
+    code: "@Component({ template: '...', selector: 'app-root' })",
+    question: "Partes de um componente (template, classe, decorator)?",
+    options: [
+      "Template (HTML), classe (lógica/estado), decorator @Component (selector, template, styles).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Template (HTML), classe (lógica/estado), decorator @Component (selector, template, styles)."
+  },
+  {
+    id: 2202,
+    category: "angular",
+    code: "@Input() item: string;\n@Output() itemChange = new EventEmitter();",
+    question: "@Input() vs @Output()?",
+    options: [
+      "@Input(): recebe dados do pai. @Output(): emite eventos ao pai (EventEmitter).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "@Input(): recebe dados do pai. @Output(): emite eventos ao pai (EventEmitter)."
+  },
+  {
+    id: 2203,
+    category: "angular",
+    code: "*ngIf=\"visible\"\n*ngFor=\"let item of items\"",
+    question: "*ngIf vs *ngFor?",
+    options: [
+      "*ngIf: mostra/esconde condicionalmente. *ngFor: itera coleção.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "*ngIf: mostra/esconde condicionalmente. *ngFor: itera coleção."
+  },
+  {
+    id: 2204,
+    category: "angular",
+    code: "{{val}}, [prop]=\"val\", (click)=\"fn()\", [(ngModel)]=\"val\"",
+    question: "O que é data binding e quantos tipos existem?",
+    options: [
+      "Sincroniza dados template↔classe: interpolation {{}}, property [prop], event (event), two-way [(ngModel)].",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Sincroniza dados template↔classe: interpolation {{}}, property [prop], event (event), two-way [(ngModel)]."
+  },
+  {
+    id: 2205,
+    category: "angular",
+    code: "@Injectable({ providedIn: 'root' })",
+    question: "O que é um serviço @Injectable?",
+    options: [
+      "Classe @Injectable com lógica reutilizável (ex: HTTP), partilhada via injeção de dependências.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Classe @Injectable com lógica reutilizável (ex: HTTP), partilhada via injeção de dependências."
+  },
+  {
+    id: 2206,
+    category: "angular",
+    code: "FormGroup / FormControl vs [(ngModel)]",
+    question: "Reactive Forms vs Template-driven Forms?",
+    options: [
+      "Reactive Forms: definidos na classe, testáveis, escaláveis. Template-driven: no HTML com ngModel, simples.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Reactive Forms: definidos na classe, testáveis, escaláveis. Template-driven: no HTML com ngModel, simples."
+  },
+  {
+    id: 2207,
+    category: "angular",
+    code: "Observable vs Promise",
+    question: "Observable vs Promise?",
+    options: [
+      "Observable: lazy, múltiplos valores, cancelável. Promise: eager, resolve uma vez.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Observable: lazy, múltiplos valores, cancelável. Promise: eager, resolve uma vez."
+  },
+  {
+    id: 2208,
+    category: "angular",
+    code: "<div>{{ data$ | async }}</div>",
+    question: "O que faz o async pipe?",
+    options: [
+      "Subscreve automaticamente um Observable no template e cancela ao destruir o componente.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Subscreve automaticamente um Observable no template e cancela ao destruir o componente."
+  },
+  {
+    id: 2209,
+    category: "angular",
+    code: "interface User { name: string }\nvs\ntype User = { name: string }",
+    question: "interface vs type em TypeScript?",
+    options: [
+      "interface: forma de tipos, suporta declaration merging. type: mais flexível (unions, intersections, primitivos).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "interface: forma de tipos, suporta declaration merging. type: mais flexível (unions, intersections, primitivos)."
+  },
+  {
+    id: 2210,
+    category: "angular",
+    code: "interface Repository<T> { get(id: string): T }",
+    question: "O que são generics em TypeScript?",
+    options: [
+      "Tipos parametrizáveis reutilizáveis (Repository<T>), mantendo type-safety.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Tipos parametrizáveis reutilizáveis (Repository<T>), mantendo type-safety."
+  },
+  {
+    id: 2211,
+    category: "angular",
+    code: "RouterModule.forRoot(routes)",
+    question: "O que é o Angular Router?",
+    options: [
+      "Mapeia URLs a componentes; define-se num array de rotas.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Mapeia URLs a componentes; define-se num array de rotas."
+  },
+  {
+    id: 2212,
+    category: "angular",
+    code: "canActivate: [AuthGuard]",
+    question: "O que é um Guard de rota?",
+    options: [
+      "Classe que decide se uma rota pode ser ativada/desativada (ex: autenticação).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Classe que decide se uma rota pode ser ativada/desativada (ex: autenticação)."
+  },
+  {
+    id: 2213,
+    category: "angular",
+    code: "loadChildren: () => import('./feature.module')",
+    question: "O que é lazy loading de módulos?",
+    options: [
+      "Carrega módulo/rota só quando necessário — reduz bundle inicial.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Carrega módulo/rota só quando necessário — reduz bundle inicial."
+  },
+  {
+    id: 2214,
+    category: "angular",
+    code: "obs$.pipe(map(...)).subscribe(...)",
+    question: "subscribe() vs pipe()?",
+    options: [
+      "subscribe(): executa e reage aos valores. pipe(): compõe operadores antes de subscrever.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "subscribe(): executa e reage aos valores. pipe(): compõe operadores antes de subscrever."
+  },
+  {
+    id: 2215,
+    category: "angular",
+    code: "@Component({ standalone: true, imports: [...] })",
+    question: "O que são standalone components (Angular 17+)?",
+    options: [
+      "Componentes que declaram as próprias dependências, sem NgModule.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Componentes que declaram as próprias dependências, sem NgModule."
+  },
+  {
+    id: 2216,
+    category: "angular",
+    code: "val = signal(0); val.set(1);",
+    question: "O que são signals?",
+    options: [
+      "Primitiva reativa (Angular 17+) que notifica dependências ao mudar, sem depender de zone.js.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Primitiva reativa (Angular 17+) que notifica dependências ao mudar, sem depender de zone.js."
+  },
+  {
+    id: 2217,
+    category: "angular",
+    code: "@ViewChild('el') vs @ContentChild('el')",
+    question: "ViewChild vs ContentChild?",
+    options: [
+      "ViewChild: elemento/componente filho no próprio template. ContentChild: conteúdo projetado (<ng-content>).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "ViewChild: elemento/componente filho no próprio template. ContentChild: conteúdo projetado (<ng-content>)."
+  },
+  {
+    id: 2218,
+    category: "angular",
+    code: "http.get<User>('/api/user')",
+    question: "O que é o HttpClient?",
+    options: [
+      "Serviço para pedidos HTTP: http.get<T>(url), http.post(url, body).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Serviço para pedidos HTTP: http.get<T>(url), http.post(url, body)."
+  },
+  {
+    id: 2219,
+    category: "angular",
+    code: "intercept(req: HttpRequest, next: HttpHandler)",
+    question: "O que é um interceptor HTTP?",
+    options: [
+      "Intercepta pedidos/respostas HTTP para lógica transversal (token, erros globais).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Intercepta pedidos/respostas HTTP para lógica transversal (token, erros globais)."
+  },
+  {
+    id: 2220,
+    category: "angular",
+    code: "constructor(private service: Service) {}\nngOnInit() { ... }",
+    question: "constructor vs ngOnInit?",
+    options: [
+      "constructor: injeção de dependências. ngOnInit: corre depois dos @Input() disponíveis — lógica de inicialização.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "constructor: injeção de dependências. ngOnInit: corre depois dos @Input() disponíveis — lógica de inicialização."
+  },
+  {
+    id: 2221,
+    category: "angular",
+    code: "sub = obs$.subscribe(); // Sem unsubscribe",
+    question: "Porque não cancelar um Observable causa memory leak?",
+    options: [
+      "Subscription fica ativa após o componente ser destruído, mantendo referências/recursos indefinidamente.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Subscription fica ativa após o componente ser destruído, mantendo referências/recursos indefinidamente."
+  },
+  {
+    id: 2222,
+    category: "angular",
+    code: "switchMap vs mergeMap vs concatMap em Typeahead",
+    question: "switchMap vs mergeMap vs concatMap — qual num typeahead?",
+    options: [
+      "switchMap cancela o pedido anterior ao chegar novo valor — ideal para typeahead.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "switchMap cancela o pedido anterior ao chegar novo valor — ideal para typeahead."
+  },
+  {
+    id: 2223,
+    category: "angular",
+    code: "*ngFor=\"let item of list; trackBy: trackById\"",
+    question: "Porque *ngFor sem trackBy pode re-renderizar tudo?",
+    options: [
+      "Angular compara por referência do array; sem trackBy recria todo o DOM mesmo com 1 item alterado.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Angular compara por referência do array; sem trackBy recria todo o DOM mesmo com 1 item alterado."
+  },
+  {
+    id: 2224,
+    category: "angular",
+    code: "changeDetection: ChangeDetectionStrategy.OnPush",
+    question: "ChangeDetectionStrategy.Default vs OnPush?",
+    options: [
+      "Default: verifica tudo em cada ciclo. OnPush: só re-renderiza se referência do @Input() mudar ou evento disparar.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Default: verifica tudo em cada ciclo. OnPush: só re-renderiza se referência do @Input() mudar ou evento disparar."
+  },
+  {
+    id: 2225,
+    category: "angular",
+    code: "this.items.push(newItem); // Com OnPush",
+    question: "Porque um array.push() pode não disparar change detection com OnPush?",
+    options: [
+      "Com OnPush, só deteta mudança de referência — push() não muda a referência, view não atualiza.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Com OnPush, só deteta mudança de referência — push() não muda a referência, view não atualiza."
+  },
+  {
+    id: 2226,
+    category: "angular",
+    code: "providedIn: 'root' vs Module provider",
+    question: "Um serviço injetado em módulos diferentes — instância única ou várias?",
+    options: [
+      "Depende do providedIn — 'root' é sempre singleton; provider em módulos diferentes pode criar instâncias separadas.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Depende do providedIn — 'root' é sempre singleton; provider em módulos diferentes pode criar instâncias separadas."
+  },
+  {
+    id: 2227,
+    category: "angular",
+    code: "providedIn: 'root'\nvs\nproviders: [MyService] no NgModule",
+    question: "providedIn: 'root' vs provider declarado no módulo?",
+    options: [
+      "providedIn: 'root': singleton a nível de app, tree-shakeable. Provider no módulo: instância por módulo (se lazy loaded).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "providedIn: 'root': singleton a nível de app, tree-shakeable. Provider no módulo: instância por módulo (se lazy loaded)."
+  },
+  {
+    id: 2228,
+    category: "angular",
+    code: "@Component({ ... })\nexport class Comp {\n  ngOnInit() { this.http.get(...).subscribe(); }\n}",
+    question: "Porque HTTP direto no componente é má prática?",
+    options: [
+      "Mistura responsabilidades, dificulta testes/reutilização — HTTP deve estar isolado num serviço.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Mistura responsabilidades, dificulta testes/reutilização — HTTP deve estar isolado num serviço."
+  },
+  {
+    id: 2229,
+    category: "angular",
+    code: "Parent -> Child1 -> Child2 -> Child3 (Passando data em cada nível)",
+    question: "O que é \"prop drilling\" e como evitar?",
+    options: [
+      "Passar dados por vários componentes intermédios que não os usam — evita-se com serviços partilhados ou state management.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Passar dados por vários componentes intermédios que não os usam — evita-se com serviços partilhados ou state management."
+  },
+  {
+    id: 2230,
+    category: "angular",
+    code: "[(ngModel)] vs Reactive Forms",
+    question: "[(ngModel)] vs Reactive Forms — onde cada um falha a escalar?",
+    options: [
+      "[(ngModel)] escala mal com validação complexa; Reactive Forms lida melhor com formulários dinâmicos/testáveis.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js me de forma isolada"
+    ],
+    correctIndex: 0,
+    explanation: "[(ngModel)] escala mal com validação complexa; Reactive Forms lida melhor com formulários dinâmicos/testáveis."
+  },
+  {
+    id: 2231,
+    category: "angular",
+    code: "obs$.pipe(tap(...)).subscribe()",
+    question: "Porque um pipe pode disparar mais vezes que esperado?",
+    options: [
+      "O Observable de origem pode emitir mais de uma vez (eventos, retry) — cada pipe processa cada emissão.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "O Observable de origem pode emitir mais de uma vez (eventos, retry) — cada pipe processa cada emissão."
+  },
+  {
+    id: 2232,
+    category: "angular",
+    code: "zone.js vs Signals",
+    question: "O que é zone.js e o que muda com signals?",
+    options: [
+      "Lib que detetava automaticamente quando correr change detection; signals reduzem essa dependência.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Lib que detetava automaticamente quando correr change detection; signals reduzem essa dependência."
+  },
+  {
+    id: 2233,
+    category: "angular",
+    code: "EventEmitter vs Subject / BehaviorSubject",
+    question: "EventEmitter vs Subject/BehaviorSubject?",
+    options: [
+      "EventEmitter: output de filho para pai. Subject/BehaviorSubject: mais gerais, usados em serviços.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "EventEmitter: output de filho para pai. Subject/BehaviorSubject: mais gerais, usados em serviços."
+  },
+  {
+    id: 2234,
+    category: "angular",
+    code: "ngOnChanges(changes: SimpleChanges)",
+    question: "Porque ngOnChanges não deteta mutações internas?",
+    options: [
+      "ngOnChanges compara referências — mutar o objeto internamente (sem trocar referência) não é detetado.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "ngOnChanges compara referências — mutar o objeto internamente (sem trocar referência) não é detetado."
+  },
+  {
+    id: 2235,
+    category: "angular",
+    code: "obs$.complete(); obs$.unsubscribe();",
+    question: "unsubscribe() num Observable já completo — o que acontece?",
+    options: [
+      "Nada acontece — chamar unsubscribe() num Observable já completo é seguro e sem efeito.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Nada acontece — chamar unsubscribe() num Observable já completo é seguro e sem efeito."
+  },
+  {
+    id: 2236,
+    category: "angular",
+    code: "Lazy loading NgModule vs Standalone component",
+    question: "Lazy loading de módulo vs de componente standalone?",
+    options: [
+      "Módulo: carrega tudo o que está nesse módulo. Standalone: carrega só o componente específico (mais granular).",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Módulo: carrega tudo o que está nesse módulo. Standalone: carrega só o componente específico (mais granular)."
+  },
+  {
+    id: 2237,
+    category: "angular",
+    code: "let data: any;",
+    question: "Porque any em TypeScript é desaconselhado?",
+    options: [
+      "Desativa a verificação de tipos, perde os benefícios do TS, esconde erros até ao runtime.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Desativa a verificação de tipos, perde os benefícios do TS, esconde erros até ao runtime."
+  },
+  {
+    id: 2238,
+    category: "angular",
+    code: "readonly prop: string;\nvs\nconst prop = 'val';",
+    question: "readonly vs const em TypeScript?",
+    options: [
+      "readonly (TS): propriedade de objeto/classe, reatribuível no construtor. const (JS): impede reatribuição da variável.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "readonly (TS): propriedade de objeto/classe, reatribuível no construtor. const (JS): impede reatribuição da variável."
+  },
+  {
+    id: 2239,
+    category: "angular",
+    code: "setTimeout(() => { console.log(this.val); }, 1000);",
+    question: "O que é um \"stale closure\" numa subscription em setTimeout?",
+    options: [
+      "Função dentro de setTimeout/callback que captura uma versão antiga já desatualizada de uma variável.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Função dentro de setTimeout/callback que captura uma versão antiga já desatualizada de uma variável."
+  },
+  {
+    id: 2240,
+    category: "angular",
+    code: "TestBed.configureTestingModule({ imports: [HttpClientTestingModule] })",
+    question: "Porque testes com HttpClient precisam de HttpClientTestingModule?",
+    options: [
+      "Simula HttpClient sem pedidos reais à rede, permitindo controlar/verificar respostas nos testes.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Simula HttpClient sem pedidos reais à rede, permitindo controlar/verificar respostas nos testes."
+  },
+  {
+    id: 2241,
+    category: "angular",
+    code: "HttpInterceptor token refresh on 401",
+    question: "Como implementar refresh automático de token via interceptor?",
+    options: [
+      "HttpInterceptor que deteta 401, chama refresh, atualiza token e repete o pedido original.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "HttpInterceptor que deteta 401, chama refresh, atualiza token e repete o pedido original."
+  },
+  {
+    id: 2242,
+    category: "angular",
+    code: "CDK Virtual Scroll + OnPush + trackBy",
+    question: "Como otimizar uma tabela com milhares de linhas?",
+    options: [
+      "trackBy, OnPush, virtual scrolling (CDK), paginação/lazy loading dos dados.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "trackBy, OnPush, virtual scrolling (CDK), paginação/lazy loading dos dados."
+  },
+  {
+    id: 2243,
+    category: "angular",
+    code: "State service (BehaviorSubject / Signal) vs NgRx",
+    question: "Como partilhar estado entre componentes não relacionados?",
+    options: [
+      "Serviço partilhado com BehaviorSubject/signal em providedIn: 'root', ou NgRx para casos complexos.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Serviço partilhado com BehaviorSubject/signal em providedIn: 'root', ou NgRx para casos complexos."
+  },
+  {
+    id: 2244,
+    category: "angular",
+    code: "loadChildren: () => import('./feature/feature.module')",
+    question: "Como estruturar um feature module lazy loaded?",
+    options: [
+      "Módulo com rotas/componentes/serviços próprios, importado via loadChildren no router principal.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Módulo com rotas/componentes/serviços próprios, importado via loadChildren no router principal."
+  },
+  {
+    id: 2245,
+    category: "angular",
+    code: "FormBuilder.array([ ... ])",
+    question: "Como implementar um formulário dinâmico gerado por configuração?",
+    options: [
+      "Campos gerados a partir de config (tipo, label, validações), usando FormArray/FormGroup em runtime.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Campos gerados a partir de config (tipo, label, validações), usando FormArray/FormGroup em runtime."
+  },
+  {
+    id: 2246,
+    category: "angular",
+    code: "Chrome DevTools Heap Snapshot",
+    question: "Como debugar uma fuga de memória numa SPA de longa duração?",
+    options: [
+      "Chrome DevTools (heap snapshots), procurar subscriptions/listeners não removidos, rever OnPush/trackBy.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Chrome DevTools (heap snapshots), procurar subscriptions/listeners não removidos, rever OnPush/trackBy."
+  },
+  {
+    id: 2247,
+    category: "angular",
+    code: "npx @openapitools/openapi-generator-cli generate -i swagger.json -g typescript-angular",
+    question: "Como gerar automaticamente um serviço Angular a partir de um Swagger?",
+    options: [
+      "openapi-generator-cli para gerar serviços/modelos TypeScript a partir do Swagger do backend.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "openapi-generator-cli para gerar serviços/modelos TypeScript a partir do Swagger do backend."
+  },
+  {
+    id: 2248,
+    category: "angular",
+    code: "spyOn(service, 'getData').and.returnValue(of(mockData));",
+    question: "Como testar um componente com dependência de serviço assíncrono?",
+    options: [
+      "TestBed, mockar o serviço com Observable/of() controlado (spies), verificar comportamento pós-emissão.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "TestBed, mockar o serviço com Observable/of() controlado (spies), verificar comportamento pós-emissão."
+  },
+  {
+    id: 2249,
+    category: "angular",
+    code: "NgModule + Standalone migration",
+    question: "Como migrar gradualmente NgModule para standalone sem quebrar a app?",
+    options: [
+      "Migrar componente a componente — Angular suporta NgModule e standalone em simultâneo — testando cada passo.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Migrar componente a componente — Angular suporta NgModule e standalone em simultâneo — testando cada passo."
+  },
+  {
+    id: 2250,
+    category: "angular",
+    code: "Map<string, { data: any, timestamp: number }>",
+    question: "Como implementar cache simples para respostas de API no frontend?",
+    options: [
+      "Serviço com Map (endpoint → resposta + timestamp), verificando expiração antes de nova chamada HTTP.",
+      "Causa re-renderização infinita de toda a árvore de componentes",
+      "Requer o registo explícito no AppModule raiz (providedIn: 'root')",
+      "Só funciona quando zone.js está completamente desativado"
+    ],
+    correctIndex: 0,
+    explanation: "Serviço com Map (endpoint → resposta + timestamp), verificando expiração antes de nova chamada HTTP."
+  },
+  // ========== GIT (15) ==========
+  {
+    id: 2301,
+    category: "git",
+    code: "git pull vs git fetch",
+    question: "git pull vs git fetch?",
+    options: [
+      "pull = fetch + merge automático. fetch: só traz alterações remotas sem aplicar.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "pull = fetch + merge automático. fetch: só traz alterações remotas sem aplicar."
+  },
+  {
+    id: 2302,
+    category: "git",
+    code: "git branch feature-x",
+    question: "Para que serve git branch?",
+    options: [
+      "Cria/lista/apaga branches — trabalho paralelo sem afetar o principal.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Cria/lista/apaga branches — trabalho paralelo sem afetar o principal."
+  },
+  {
+    id: 2303,
+    category: "git",
+    code: "git clone https://github.com/org/repo.git",
+    question: "O que faz git clone?",
+    options: [
+      "Copia um repositório remoto completo (com histórico) para local.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Copia um repositório remoto completo (com histórico) para local."
+  },
+  {
+    id: 2304,
+    category: "git",
+    code: "git add . \nvs\ngit commit -m \"msg\"",
+    question: "git add vs git commit?",
+    options: [
+      "add: prepara alterações (staging). commit: regista no histórico local.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "add: prepara alterações (staging). commit: regista no histórico local."
+  },
+  {
+    id: 2305,
+    category: "git",
+    code: "<<<<<<< HEAD\n=======\n>>>>>>> branch",
+    question: "O que é um merge conflict?",
+    options: [
+      "Git não consegue combinar automaticamente alterações concorrentes na mesma linha — resolução manual.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Git não consegue combinar automaticamente alterações concorrentes na mesma linha — resolução manual."
+  },
+  {
+    id: 2306,
+    category: "git",
+    code: "git remote -v\n// origin https://...",
+    question: "O que é origin?",
+    options: [
+      "Nome padrão do repositório remoto principal.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Nome padrão do repositório remoto principal."
+  },
+  {
+    id: 2307,
+    category: "git",
+    code: "git status",
+    question: "O que faz git status?",
+    options: [
+      "Mostra estado atual: ficheiros modificados, staged, branch atual.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Mostra estado atual: ficheiros modificados, staged, branch atual."
+  },
+  {
+    id: 2308,
+    category: "git",
+    code: "git rebase main vs git merge main",
+    question: "rebase vs merge — o que muda no histórico?",
+    options: [
+      "rebase: reescreve histórico, linear. merge: cria commit de junção, preserva histórico real.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "rebase: reescreve histórico, linear. merge: cria commit de junção, preserva histórico real."
+  },
+  {
+    id: 2309,
+    category: "git",
+    code: "git cherry-pick abc1234",
+    question: "O que é git cherry-pick?",
+    options: [
+      "Aplica um commit específico de outro branch ao atual, sem merge completo.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Aplica um commit específico de outro branch ao atual, sem merge completo."
+  },
+  {
+    id: 2310,
+    category: "git",
+    code: "git revert HEAD vs git reset HEAD~1",
+    question: "git revert vs git reset — quando usar cada um?",
+    options: [
+      "revert: novo commit que desfaz (seguro em histórico partilhado). reset: reescreve histórico (perigoso após push).",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "revert: novo commit que desfaz (seguro em histórico partilhado). reset: reescreve histórico (perigoso após push)."
+  },
+  {
+    id: 2311,
+    category: "git",
+    code: "git reset --soft / --mixed / --hard",
+    question: "reset --soft vs --mixed vs --hard?",
+    options: [
+      "--soft: mantém staged. --mixed (default): mantém no working dir, tira do staging. --hard: descarta tudo.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "--soft: mantém staged. --mixed (default): mantém no working dir, tira do staging. --hard: descarta tudo."
+  },
+  {
+    id: 2312,
+    category: "git",
+    code: "git push --force origin main",
+    question: "Porque force push é perigoso num branch partilhado?",
+    options: [
+      "Pode sobrescrever/apagar commits de colegas que já fizeram pull — perda de trabalho.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Pode sobrescrever/apagar commits de colegas que já fizeram pull — perda de trabalho."
+  },
+  {
+    id: 2313,
+    category: "git",
+    code: "git rm --cached file.log",
+    question: ".gitignore adicionado depois de um ficheiro já commitado — efeito?",
+    options: [
+      "Sem efeito nos já rastreados — precisa git rm --cached primeiro.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Sem efeito nos já rastreados — precisa git rm --cached primeiro."
+  },
+  {
+    id: 2314,
+    category: "git",
+    code: "Committed secret pushed to remote",
+    question: "Fizeste commit de uma password e já deste push — como resolves?",
+    options: [
+      "git revert do commit + rotação imediata da credencial (histórico Git é permanente, revert não apaga).",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "git revert do commit + rotação imediata da credencial (histórico Git é permanente, revert não apaga)."
+  },
+  {
+    id: 2315,
+    category: "git",
+    code: "Trunk-based vs GitFlow",
+    question: "Como estruturarias um workflow de branching para uma equipa pequena?",
+    options: [
+      "Trunk-based com branches curtas e feature flags — menos overhead que Git Flow para equipas pequenas.",
+      "Apaga permanentemente o histórico do repositório remoto",
+      "Não altera os ficheiros no working directory nem na staging area",
+      "Requer permissões administrativas especiais no repositório GitHub/GitLab"
+    ],
+    correctIndex: 0,
+    explanation: "Trunk-based com branches curtas e feature flags — menos overhead que Git Flow para equipas pequenas."
+  },
+  // ========== KUBERNETES & DOCKER (15) ==========
+  {
+    id: 2401,
+    category: "kubernetes-docker",
+    code: "Container vs VM",
+    question: "Container vs máquina virtual?",
+    options: [
+      "VM virtualiza hardware (SO próprio); container partilha o kernel do host, mais leve/rápido.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "VM virtualiza hardware (SO próprio); container partilha o kernel do host, mais leve/rápido."
+  },
+  {
+    id: 2402,
+    category: "kubernetes-docker",
+    code: "docker build -t app .",
+    question: "Imagem Docker vs Dockerfile?",
+    options: [
+      "Imagem: pacote imutável com código+dependências. Dockerfile: receita para construir a imagem.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Imagem: pacote imutável com código+dependências. Dockerfile: receita para construir a imagem."
+  },
+  {
+    id: 2403,
+    category: "kubernetes-docker",
+    code: "apiVersion: v1\nkind: Pod",
+    question: "O que é um Pod?",
+    options: [
+      "Menor unidade de deployment — um ou mais containers partilhando rede/storage.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Menor unidade de deployment — um ou mais containers partilhando rede/storage."
+  },
+  {
+    id: 2404,
+    category: "kubernetes-docker",
+    code: "kind: Deployment\nreplicas: 3",
+    question: "O que é um Deployment?",
+    options: [
+      "Garante N réplicas de um Pod sempre a correr, gerindo updates.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Garante N réplicas de um Pod sempre a correr, gerindo updates."
+  },
+  {
+    id: 2405,
+    category: "kubernetes-docker",
+    code: "kind: Service",
+    question: "O que é um Service?",
+    options: [
+      "Expõe um conjunto de Pods sob endereço estável, mesmo que os Pods mudem.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Expõe um conjunto de Pods sob endereço estável, mesmo que os Pods mudem."
+  },
+  {
+    id: 2406,
+    category: "kubernetes-docker",
+    code: "docker run vs docker-compose up",
+    question: "docker run vs docker-compose up?",
+    options: [
+      "docker run: um container. docker-compose up: orquestra múltiplos containers via ficheiro.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "docker run: um container. docker-compose up: orquestra múltiplos containers via ficheiro."
+  },
+  {
+    id: 2407,
+    category: "kubernetes-docker",
+    code: "Docker Hub / ECR / GAR",
+    question: "O que é um registry de imagens?",
+    options: [
+      "Repositório onde imagens são armazenadas/distribuídas (push/pull).",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Repositório onde imagens são armazenadas/distribuídas (push/pull)."
+  },
+  {
+    id: 2408,
+    category: "kubernetes-docker",
+    code: "Works on my machine vs Kubernetes cluster",
+    question: "Porque \"funciona na minha máquina\" e falha no cluster?",
+    options: [
+      "Diferenças de ambiente (SO, versões, permissões) — Docker resolve isso, mas config externa ao cluster ainda pode falhar.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Diferenças de ambiente (SO, versões, permissões) — Docker resolve isso, mas config externa ao cluster ainda pode falhar."
+  },
+  {
+    id: 2409,
+    category: "kubernetes-docker",
+    code: "ClusterIP vs NodePort vs LoadBalancer",
+    question: "ClusterIP vs NodePort vs LoadBalancer?",
+    options: [
+      "ClusterIP: só interno. NodePort: expõe porta em cada nó. LoadBalancer: load balancer externo (cloud).",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "ClusterIP: só interno. NodePort: expõe porta em cada nó. LoadBalancer: load balancer externo (cloud)."
+  },
+  {
+    id: 2410,
+    category: "kubernetes-docker",
+    code: "readinessProbe vs livenessProbe",
+    question: "Readiness probe vs liveness probe?",
+    options: [
+      "Readiness: decide se recebe tráfego. Liveness: decide se reinicia. Confundir = tirar tráfego de Pod saudável ou nunca reiniciar um preso.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Readiness: decide se recebe tráfego. Liveness: decide se reinicia. Confundir = tirar tráfego de Pod saudável ou nunca reiniciar um preso."
+  },
+  {
+    id: 2411,
+    category: "kubernetes-docker",
+    code: "FROM node AS builder\n...\nFROM nginx:alpine\nCOPY --from=builder ...",
+    question: "Porque multi-stage build reduz o tamanho da imagem?",
+    options: [
+      "Cada stage só passa o necessário ao seguinte (ferramentas de build ficam para trás) — imagem final mais pequena.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Cada stage só passa o necessário ao seguinte (ferramentas de build ficam para trás) — imagem final mais pequena."
+  },
+  {
+    id: 2412,
+    category: "kubernetes-docker",
+    code: "docker restart container (sem volume)",
+    question: "Dados dentro de um container sem volume — o que acontece ao reiniciar?",
+    options: [
+      "Perdem-se — filesystem do container é efémero; precisa de volumes para persistir dados.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Perdem-se — filesystem do container é efémero; precisa de volumes para persistir dados."
+  },
+  {
+    id: 2413,
+    category: "kubernetes-docker",
+    code: "ConfigMap vs Secret",
+    question: "ConfigMap vs Secret?",
+    options: [
+      "ConfigMap: config não sensível. Secret: dados sensíveis, armazenados diferenciadamente.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "ConfigMap: config não sensível. Secret: dados sensíveis, armazenados diferenciadamente."
+  },
+  {
+    id: 2414,
+    category: "kubernetes-docker",
+    code: "Angular App Dockerfile",
+    question: "Como fazer deploy de uma app Angular num container eficiente?",
+    options: [
+      "Multi-stage: stage node (npm run build) + stage nginx leve só com os estáticos gerados.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "Multi-stage: stage node (npm run build) + stage nginx leve só com os estáticos gerados."
+  },
+  {
+    id: 2415,
+    category: "kubernetes-docker",
+    code: "CrashLoopBackOff",
+    question: "Pod em CrashLoopBackOff — como diagnosticas?",
+    options: [
+      "kubectl describe pod + kubectl logs, ver erros de arranque, config/variáveis em falta, dependências externas.",
+      "Causa a interrupção imediata do pod com erro OOMKilled",
+      "Apenas afeta máquinas virtuais e não containers Docker",
+      "Requer a reinicialização manual de todo o cluster Kubernetes"
+    ],
+    correctIndex: 0,
+    explanation: "kubectl describe pod + kubectl logs, ver erros de arranque, config/variáveis em falta, dependências externas."
+  },
+  // ========== CI/CD — GITHUB ACTIONS (15) ==========
+  {
+    id: 2501,
+    category: "github-actions",
+    code: "CI vs CD",
+    question: "O que significa CI/CD?",
+    options: [
+      "Continuous Integration/Continuous Deployment — automatizar build, testes, entrega.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Continuous Integration/Continuous Deployment — automatizar build, testes, entrega."
+  },
+  {
+    id: 2502,
+    category: "github-actions",
+    code: ".github/workflows/main.yml",
+    question: "O que é um workflow?",
+    options: [
+      "Sequência automatizada de passos disparada por um evento (push, PR).",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Sequência automatizada de passos disparada por um evento (push, PR)."
+  },
+  {
+    id: 2503,
+    category: "github-actions",
+    code: "jobs:\n  build:\n    steps:\n      - uses: actions/checkout@v4",
+    question: "Job vs step?",
+    options: [
+      "Job: conjunto de steps num runner. Step: comando/ação individual dentro do job.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Job: conjunto de steps num runner. Step: comando/ação individual dentro do job."
+  },
+  {
+    id: 2504,
+    category: "github-actions",
+    code: "on:\n  push:\n  pull_request:",
+    question: "Para que serve on: push / on: pull_request?",
+    options: [
+      "Define quando o workflow corre — push ou abertura/atualização de PR.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Define quando o workflow corre — push ou abertura/atualização de PR."
+  },
+  {
+    id: 2505,
+    category: "github-actions",
+    code: "runs-on: ubuntu-latest",
+    question: "O que é um runner?",
+    options: [
+      "Máquina (GitHub-hosted ou self-hosted) que executa os jobs.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Máquina (GitHub-hosted ou self-hosted) que executa os jobs."
+  },
+  {
+    id: 2506,
+    category: "github-actions",
+    code: "env:\n  NODE_ENV: production",
+    question: "Como definir uma variável de ambiente num workflow?",
+    options: [
+      "env: a nível de workflow/job/step, ou via secrets/vars do repositório.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "env: a nível de workflow/job/step, ou via secrets/vars do repositório."
+  },
+  {
+    id: 2507,
+    category: "github-actions",
+    code: "uses: actions/upload-artifact@v4",
+    question: "O que é um artifact de workflow?",
+    options: [
+      "Ficheiro(s) gerado por um job, guardado temporariamente para partilhar entre jobs ou download.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Ficheiro(s) gerado por um job, guardado temporariamente para partilhar entre jobs ou download."
+  },
+  {
+    id: 2508,
+    category: "github-actions",
+    code: "${{ secrets.DB_PASS }} vs ${{ vars.DB_HOST }}",
+    question: "secrets vs variables?",
+    options: [
+      "secrets: encriptados, ocultos nos logs. variables: não sensíveis, texto simples.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "secrets: encriptados, ocultos nos logs. variables: não sensíveis, texto simples."
+  },
+  {
+    id: 2509,
+    category: "github-actions",
+    code: "Local green vs CI red",
+    question: "Porque um pipeline passa localmente mas falha no CI?",
+    options: [
+      "Versões de dependências diferentes, variáveis em falta, ou dependência de estado local que não existe no runner.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Versões de dependências diferentes, variáveis em falta, ou dependência de estado local que não existe no runner."
+  },
+  {
+    id: 2510,
+    category: "github-actions",
+    code: "uses: actions/cache@v4",
+    question: "O que é caching de dependências num workflow?",
+    options: [
+      "Guarda dependências (ex: node_modules) entre execuções — reduz tempo de build.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Guarda dependências (ex: node_modules) entre execuções — reduz tempo de build."
+  },
+  {
+    id: 2511,
+    category: "github-actions",
+    code: "echo \"${{ secrets.API_KEY }}\" // perigoso",
+    question: "Como evitar expor um segredo nos logs?",
+    options: [
+      "Nunca echo de secrets, mascarar outputs sensíveis, usar sempre secrets.NOME.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Nunca echo de secrets, mascarar outputs sensíveis, usar sempre secrets.NOME."
+  },
+  {
+    id: 2512,
+    category: "github-actions",
+    code: "deploy:\n  needs: build",
+    question: "needs: vs steps sequenciais no mesmo job?",
+    options: [
+      "needs:: dependência explícita entre jobs. Steps: sempre sequenciais dentro do mesmo job.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "needs:: dependência explícita entre jobs. Steps: sempre sequenciais dentro do mesmo job."
+  },
+  {
+    id: 2513,
+    category: "github-actions",
+    code: "strategy:\n  matrix:\n    node-version: [18, 20]",
+    question: "O que é um matrix build?",
+    options: [
+      "Corre o mesmo job com combinações diferentes de variáveis, em paralelo.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Corre o mesmo job com combinações diferentes de variáveis, em paralelo."
+  },
+  {
+    id: 2514,
+    category: "github-actions",
+    code: "build -> test -> deploy-staging",
+    question: "Como estruturar build → testes → deploy para staging?",
+    options: [
+      "Build → testes (needs: build) → deploy staging (needs: test), cada um com condição de sucesso.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Build → testes (needs: build) → deploy staging (needs: test), cada um com condição de sucesso."
+  },
+  {
+    id: 2515,
+    category: "github-actions",
+    code: "if: failure()\nuses: rollback-action",
+    question: "Como implementar rollback automático se o deploy falhar?",
+    options: [
+      "Step pós-deploy com health check; se falhar, corre job de rollback automático para a versão anterior.",
+      "O pipeline é abortado imediatamente com erro de permissões",
+      "Aplica-se apenas a runners self-hosted no Linux",
+      "Os dados são expostos publicamente nos logs do workflow"
+    ],
+    correctIndex: 0,
+    explanation: "Step pós-deploy com health check; se falhar, corre job de rollback automático para a versão anterior."
+  },
+  // ========== POSTGRESQL & MIGRATIONS (15) ==========
+  {
+    id: 2601,
+    category: "postgresql",
+    code: "PRIMARY KEY vs FOREIGN KEY",
+    question: "Chave primária vs chave estrangeira?",
+    options: [
+      "Primária: identifica unicamente a linha. Estrangeira: referencia chave primária de outra tabela (integridade referencial).",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Primária: identifica unicamente a linha. Estrangeira: referencia chave primária de outra tabela (integridade referencial)."
+  },
+  {
+    id: 2602,
+    category: "postgresql",
+    code: "INNER JOIN vs LEFT JOIN",
+    question: "INNER JOIN vs LEFT JOIN?",
+    options: [
+      "INNER JOIN: só com correspondência em ambas. LEFT JOIN: todas da esquerda, NULL onde não há correspondência.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "INNER JOIN: só com correspondência em ambas. LEFT JOIN: todas da esquerda, NULL onde não há correspondência."
+  },
+  {
+    id: 2603,
+    category: "postgresql",
+    code: "Flyway / Liquibase / EF Migrations",
+    question: "O que é uma migration?",
+    options: [
+      "Script versionado que altera o schema de forma controlada e reproduzível (ex: Add-Migration no EF Core).",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Script versionado que altera o schema de forma controlada e reproduzível (ex: Add-Migration no EF Core)."
+  },
+  {
+    id: 2604,
+    category: "postgresql",
+    code: "SELECT category, COUNT(*) FROM items WHERE active=true GROUP BY category",
+    question: "O que faz WHERE + GROUP BY?",
+    options: [
+      "Filtra linhas (WHERE) e agrupa por critério (GROUP BY), tipicamente com agregação (COUNT, SUM).",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Filtra linhas (WHERE) e agrupa por critério (GROUP BY), tipicamente com agregação (COUNT, SUM)."
+  },
+  {
+    id: 2605,
+    category: "postgresql",
+    code: "CREATE INDEX idx_user_email ON users(email);",
+    question: "O que é um índice?",
+    options: [
+      "Estrutura que acelera pesquisas numa coluna, custando espaço e escrita mais lenta.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Estrutura que acelera pesquisas numa coluna, custando espaço e escrita mais lenta."
+  },
+  {
+    id: 2606,
+    category: "postgresql",
+    code: "DELETE FROM users;\nvs\nTRUNCATE TABLE users;",
+    question: "DELETE vs TRUNCATE?",
+    options: [
+      "DELETE: remove linhas (com WHERE, transacional, mais lento). TRUNCATE: limpa tudo rapidamente, sem log linha-a-linha.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "DELETE: remove linhas (com WHERE, transacional, mais lento). TRUNCATE: limpa tudo rapidamente, sem log linha-a-linha."
+  },
+  {
+    id: 2607,
+    category: "postgresql",
+    code: "BEGIN; UPDATE ...; COMMIT;",
+    question: "O que é uma transação?",
+    options: [
+      "Conjunto de operações atómicas — tudo ou nada (rollback).",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Conjunto de operações atómicas — tudo ou nada (rollback)."
+  },
+  {
+    id: 2608,
+    category: "postgresql",
+    code: "LEFT JOIN com 1-to-many relationship",
+    question: "Porque um LEFT JOIN pode duplicar linhas?",
+    options: [
+      "Se a tabela da direita tiver múltiplas correspondências, cada uma gera linha extra — duplica dados.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Se a tabela da direita tiver múltiplas correspondências, cada uma gera linha extra — duplica dados."
+  },
+  {
+    id: 2609,
+    category: "postgresql",
+    code: "1 query principal + N queries secundárias em loop",
+    question: "O que é o problema N+1?",
+    options: [
+      "Query dispara query adicional por cada resultado da query principal para carregar relações — degrada performance.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Query dispara query adicional por cada resultado da query principal para carregar relações — degrada performance."
+  },
+  {
+    id: 2610,
+    category: "postgresql",
+    code: "Índice em cada coluna da tabela",
+    question: "Porque indexar tudo não é boa ideia?",
+    options: [
+      "Índices ocupam espaço e abrandam escritas — só compensa em colunas usadas frequentemente em WHERE/JOIN.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Índices ocupam espaço e abrandam escritas — só compensa em colunas usadas frequentemente em WHERE/JOIN."
+  },
+  {
+    id: 2611,
+    category: "postgresql",
+    code: "Migration error mid-execution",
+    question: "Migration falha a meio em produção — o que acontece?",
+    options: [
+      "BD pode ficar num estado intermédio inconsistente — migrations devem ser idempotentes/reversíveis ou transacionais.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "BD pode ficar num estado intermédio inconsistente — migrations devem ser idempotentes/reversíveis ou transacionais."
+  },
+  {
+    id: 2612,
+    category: "postgresql",
+    code: "READ COMMITTED vs SERIALIZABLE",
+    question: "READ COMMITTED vs SERIALIZABLE, a alto nível?",
+    options: [
+      "READ COMMITTED: lê dados já commitados (leituras não repetíveis possíveis). SERIALIZABLE: isolamento total, mais contenção.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "READ COMMITTED: lê dados já commitados (leituras não repetíveis possíveis). SERIALIZABLE: isolamento total, mais contenção."
+  },
+  {
+    id: 2613,
+    category: "postgresql",
+    code: "SELECT * FROM users",
+    question: "Porque SELECT * é desaconselhado?",
+    options: [
+      "Traz colunas desnecessárias (custo I/O) e quebra se o schema mudar.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Traz colunas desnecessárias (custo I/O) e quebra se o schema mudar."
+  },
+  {
+    id: 2614,
+    category: "postgresql",
+    code: "EXPLAIN ANALYZE SELECT ...",
+    question: "Query lenta em produção — como analisar (EXPLAIN ANALYZE)?",
+    options: [
+      "EXPLAIN ANALYZE na query — ver plano de execução real, identificar sequential scans, considerar índice.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "EXPLAIN ANALYZE na query — ver plano de execução real, identificar sequential scans, considerar índice."
+  },
+  {
+    id: 2615,
+    category: "postgresql",
+    code: "ALTER TABLE users ALTER COLUMN age TYPE bigint;",
+    question: "Como mudar o tipo de uma coluna sem downtime?",
+    options: [
+      "Adicionar nova coluna, popular em background, mudar a app para usá-la, só depois remover a antiga — evita ALTER bloqueante.",
+      "Gera bloqueio exclusivo (exclusive lock) em todas as tabelas da base de dados",
+      "Invalida automaticamente todos os índices existentes na tabela",
+      "Não é suportado dentro de blocos de transação BEGIN/COMMIT"
+    ],
+    correctIndex: 0,
+    explanation: "Adicionar nova coluna, popular em background, mudar a app para usá-la, só depois remover a antiga — evita ALTER bloqueante."
+  },
+  // ========== WINDOWS SERVER (10) ==========
+  {
+    id: 2701,
+    category: "windows-server",
+    code: "Windows Server OS",
+    question: "O que é o Windows Server?",
+    options: [
+      "SO da Microsoft para correr serviços de rede, aplicações e infraestrutura empresarial.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "SO da Microsoft para correr serviços de rede, aplicações e infraestrutura empresarial."
+  },
+  {
+    id: 2702,
+    category: "windows-server",
+    code: "Active Directory (AD DS)",
+    question: "O que é o Active Directory, a alto nível?",
+    options: [
+      "Serviço de diretório que centraliza gestão de utilizadores, grupos e permissões numa rede.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Serviço de diretório que centraliza gestão de utilizadores, grupos e permissões numa rede."
+  },
+  {
+    id: 2703,
+    category: "windows-server",
+    code: "Internet Information Services (IIS)",
+    question: "O que é o IIS?",
+    options: [
+      "Servidor web da Microsoft para hospedar apps/sites .NET (e outros) no Windows Server.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Servidor web da Microsoft para hospedar apps/sites .NET (e outros) no Windows Server."
+  },
+  {
+    id: 2704,
+    category: "windows-server",
+    code: "Group Policy Object (GPO)",
+    question: "O que é uma Group Policy?",
+    options: [
+      "Regras aplicadas centralmente a utilizadores/computadores num domínio AD (ex: políticas de password).",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Regras aplicadas centralmente a utilizadores/computadores num domínio AD (ex: políticas de password)."
+  },
+  {
+    id: 2705,
+    category: "windows-server",
+    code: "Bare-metal vs Hyper-V VM",
+    question: "Servidor físico vs VM Windows Server?",
+    options: [
+      "Físico: corre direto no hardware. VM: corre sobre hipervisor, partilhando recursos.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Físico: corre direto no hardware. VM: corre sobre hipervisor, partilhando recursos."
+  },
+  {
+    id: 2706,
+    category: "windows-server",
+    code: "Service Account permissions failure",
+    question: "Serviço não arranca por permissões, não por erro de código — comum?",
+    options: [
+      "Serviços correm sob uma conta específica sem privilégios necessários — verifica sempre a conta de serviço.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Serviços correm sob uma conta específica sem privilégios necessários — verifica sempre a conta de serviço."
+  },
+  {
+    id: 2707,
+    category: "windows-server",
+    code: "HTTP 503 Service Unavailable no IIS",
+    question: "Site IIS devolve 503 — o que verificar primeiro?",
+    options: [
+      "Application pool parado/com erro, permissões da pasta do site, ou falha de config no web.config.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Application pool parado/com erro, permissões da pasta do site, ou falha de config no web.config."
+  },
+  {
+    id: 2708,
+    category: "windows-server",
+    code: "NTFS permissions vs Share permissions",
+    question: "Permissões NTFS vs permissões de partilha?",
+    options: [
+      "NTFS: aplica-se local independentemente do acesso. Partilha: só via rede — a mais restritiva prevalece.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "NTFS: aplica-se local independentemente do acesso. Partilha: só via rede — a mais restritiva prevalece."
+  },
+  {
+    id: 2709,
+    category: "windows-server",
+    code: "eventvwr.msc",
+    question: "O que é o Event Viewer?",
+    options: [
+      "Ferramenta que regista logs de sistema/aplicações/segurança — primeiro sítio a olhar num falhanço silencioso.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Ferramenta que regista logs de sistema/aplicações/segurança — primeiro sítio a olhar num falhanço silencioso."
+  },
+  {
+    id: 2710,
+    category: "windows-server",
+    code: "IIS URL Rewrite Rule -> index.html fallback",
+    question: "Como configurar um site Angular estático no IIS com fallback de rotas?",
+    options: [
+      "Publicar estáticos num site IIS + regra de URL Rewrite redirecionando pedidos não encontrados para index.html.",
+      "Devolve imediatamente o código de erro HTTP 404 Not Found",
+      "Exige a reinicialização física do servidor Windows Server",
+      "Apenas se aplica a ambientes baseados em Active Directory Domain Services"
+    ],
+    correctIndex: 0,
+    explanation: "Publicar estáticos num site IIS + regra de URL Rewrite redirecionando pedidos não encontrados para index.html."
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
