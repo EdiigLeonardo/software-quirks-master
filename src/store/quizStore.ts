@@ -29,11 +29,14 @@ interface QuizStore {
   answers: Record<number, number>;
   showExplanation: boolean;
   filteredQuestions: Question[];
+  isInterviewMode: boolean;
+  seenQuestionIds: number[];
 
   setSelectedCategories: (categories: Category[]) => void;
   toggleCategory: (category: Category) => void;
   toggleAllCategories: () => void;
   addQuestions: () => void;
+  toggleInterviewMode: () => void;
   startQuiz: () => void;
   answerQuestion: (optionIndex: number) => void;
   nextQuestion: () => void;
@@ -47,7 +50,25 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   currentIndex: 0,
   answers: {},
   showExplanation: false,
-  filteredQuestions: buildFilteredQuestions(allCategories, 5),
+  isInterviewMode: false,
+  seenQuestionIds: [],
+  filteredQuestions: buildFilteredQuestions(allCategories, 5, []),
+
+  toggleInterviewMode: () => {
+    set((state) => {
+      const nextMode = !state.isInterviewMode;
+      const nextSeen = nextMode ? state.seenQuestionIds : [];
+      return {
+        isInterviewMode: nextMode,
+        seenQuestionIds: nextSeen,
+        filteredQuestions: buildFilteredQuestions(
+          state.selectedCategories,
+          state.questionsPerCategory,
+          nextSeen,
+        ),
+      };
+    });
+  },
 
   setSelectedCategories: (categories) => {
     set({
@@ -59,6 +80,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       filteredQuestions: buildFilteredQuestions(
         categories,
         get().questionsPerCategory,
+        get().seenQuestionIds,
       ),
     });
   },
@@ -78,6 +100,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
         filteredQuestions: buildFilteredQuestions(
           nextCategories,
           state.questionsPerCategory,
+          state.seenQuestionIds,
         ),
       };
     });
@@ -99,6 +122,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
         filteredQuestions: buildFilteredQuestions(
           nextCategories,
           state.questionsPerCategory,
+          state.seenQuestionIds,
         ),
       };
     });
@@ -115,24 +139,33 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
         filteredQuestions: buildFilteredQuestions(
           state.selectedCategories,
           nextQuestionsPerCategory,
+          state.seenQuestionIds,
         ),
       };
     });
   },
 
   startQuiz: () => {
-    const { selectedCategories, questionsPerCategory } = get();
+    const { selectedCategories, questionsPerCategory, isInterviewMode, seenQuestionIds } = get();
     if (selectedCategories.length === 0) return;
+
+    const newQuestions = buildFilteredQuestions(
+      selectedCategories,
+      questionsPerCategory,
+      seenQuestionIds,
+    );
+
+    const newSeenIds = isInterviewMode
+      ? Array.from(new Set([...seenQuestionIds, ...newQuestions.map((q) => q.id)]))
+      : seenQuestionIds;
 
     set({
       state: "playing",
       currentIndex: 0,
       answers: {},
       showExplanation: false,
-      filteredQuestions: buildFilteredQuestions(
-        selectedCategories,
-        questionsPerCategory,
-      ),
+      filteredQuestions: newQuestions,
+      seenQuestionIds: newSeenIds,
     });
   },
 
@@ -166,14 +199,16 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   },
 
   restartQuiz: () => {
+    const { selectedCategories, questionsPerCategory, seenQuestionIds } = get();
     set({
       state: "start",
       currentIndex: 0,
       answers: {},
       showExplanation: false,
       filteredQuestions: buildFilteredQuestions(
-        get().selectedCategories,
-        get().questionsPerCategory,
+        selectedCategories,
+        questionsPerCategory,
+        seenQuestionIds,
       ),
     });
   },

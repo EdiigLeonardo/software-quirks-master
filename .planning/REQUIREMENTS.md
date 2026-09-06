@@ -1,7 +1,6 @@
-# Requirements - Milestone 2 (Perguntas & Respostas Siemens - Estilo Caveman)
+# Requirements - Milestone 3 (Modo Entrevista Sem Repetição)
 
-## High-Level Requirements
-1. **Parser & Extrator de Perguntas/Respostas**: Ler ficheiros em `@questions/` e emparelhar pergunta + resposta.
-2. **Estilo Caveman**: Formatar explicações/respostas curtas, sem "palha", focadas em palavras-chave e conceitos diretos.
-3. **Novas Categorias & Mapeamento**: Garantir suporte nas rotas/UI da app para as novas perguntas (Java, Spring Boot, Angular, Siemens Prep, DevOps/Infra).
-4. **Integração no Quiz**: Integrar os novos dados em `src/data/questions.ts`.
+## Requirements
+1. **Interview Mode Toggle**: Opção para ligar/desligar o modo "Interview Prep".
+2. **Exclusão de Respondidas**: Não repetir IDs de perguntas já apresentadas enquanto o modo estiver ativo.
+3. **Reset ao Sair**: Limpar lista de perguntas vistas ao desligar o modo.

@@ -1,3 +1,6 @@
-# Roadmap
+# Roadmap - Milestone 3
 
-- [Milestone 2.0 (Archived)](file:///home/edig/Documents/study/node/software-quirks-master/.planning/milestones/v2.0-ROADMAP.md) — Importação Perguntas Siemens (Estilo Caveman).
+## Phase 1: Implementação do Módulo de Entrevista na Store e UI
+- Adicionar estado `isInterviewMode` e `seenQuestionIds` em `quizStore.ts`.
+- Adicionar filtro de não-repetição na função `buildFilteredQuestions`.
+- Adicionar Toggle/Botão "Modo Entrevista" no `QuizStart.tsx`.

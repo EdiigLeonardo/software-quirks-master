@@ -30,6 +30,9 @@ export function QuizStart() {
     toggleAllCategories,
     startQuiz,
     addQuestions,
+    isInterviewMode,
+    toggleInterviewMode,
+    seenQuestionIds,
   } = useQuizStore();
 
   const isAllSelected = selectedCategories.length === allCategories.length;
@@ -55,7 +58,17 @@ export function QuizStart() {
               {questionsPerCategory} QUESTÕES POR CATEGORIA
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap justify-end">
+            <button
+              onClick={toggleInterviewMode}
+              className={`text-[10px] uppercase tracking-tighter font-mono px-2 py-1 rounded border transition-colors ${
+                isInterviewMode
+                  ? "border-emerald-500 bg-emerald-500/20 text-emerald-300 font-bold"
+                  : "border-border hover:bg-primary/5 text-muted-foreground"
+              }`}
+            >
+              {isInterviewMode ? `[ 🎓 Modo Entrevista ON (${seenQuestionIds.length} vistas) ]` : "[ 🎓 Modo Entrevista OFF ]"}
+            </button>
             {questionsPerCategory < 30 && (
               <button
                 onClick={addQuestions}
