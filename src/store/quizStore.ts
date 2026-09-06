@@ -3,7 +3,14 @@ import { Category, Question, allCategories, questions } from "@/data/questions";
 
 type QuizState = "start" | "playing" | "results";
 
-const shuffle = <T>(items: T[]) => [...items].sort(() => Math.random() - 0.5);
+const shuffle = <T>(items: T[]): T[] => {
+  const array = [...items];
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
 const buildFilteredQuestions = (
   selectedCategories: Category[],
