@@ -108,7 +108,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set((state) => {
       const nextQuestionsPerCategory = Math.min(
         state.questionsPerCategory + 5,
-        30,
+        150,
       );
       return {
         questionsPerCategory: nextQuestionsPerCategory,
