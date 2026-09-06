@@ -5,6 +5,13 @@ export type Category =
   | "nodejs"
   | "reactjs"
   | "java"
+  | "springboot"
+  | "angular"
+  | "git"
+  | "kubernetes-docker"
+  | "postgresql"
+  | "windows-server"
+  | "siemens-prep"
   | "python"
   | "aws"
   | "github-actions"
@@ -20,6 +27,13 @@ export const allCategories: Category[] = [
   "nodejs",
   "reactjs",
   "java",
+  "springboot",
+  "angular",
+  "git",
+  "kubernetes-docker",
+  "postgresql",
+  "windows-server",
+  "siemens-prep",
   "python",
   "aws",
   "github-actions",
@@ -46,6 +60,13 @@ export const categoryLabels: Record<Category, string> = {
   nodejs: "Node.js",
   reactjs: "React.js",
   java: "Java",
+  springboot: "Spring Boot",
+  angular: "Angular",
+  git: "Git",
+  "kubernetes-docker": "Kubernetes & Docker",
+  postgresql: "PostgreSQL & Migrations",
+  "windows-server": "Windows Server & IIS",
+  "siemens-prep": "Siemens Interview Prep",
   python: "Python",
   aws: "AWS",
   "github-actions": "GitHub Actions",
@@ -61,7 +82,14 @@ export const categoryDescriptions: Record<Category, string> = {
   typescript: "Tipos, generics, utility types e type system",
   nodejs: "Event loop, streams, modules, APIs do Node.js",
   reactjs: "Hooks, state, lifecycle, patterns do React",
-  java: "OOP, JVM, streams, generics e mais",
+  java: "OOP, JVM, streams, generics, rasteiras e cenários hipotéticos",
+  springboot: "Auto-config, DI, JPA, Security, REST e rasteiras Spring",
+  angular: "Components, RxJS, OnPush, Signals, Forms e rasteiras Angular",
+  git: "Fetch vs Pull, Rebase, Reset, Cherry-pick e resolução de conflitos",
+  "kubernetes-docker": "Pods, Containers, Probes, Volumes, Multi-stage builds",
+  postgresql: "SQL, Joins, N+1, Transações, Migrations e Indexação",
+  "windows-server": "IIS, Active Directory, NTFS, Event Viewer e deployment",
+  "siemens-prep": "Perguntas de entrevista Siemens (Beginner & Avançado)",
   python: "OOP, decorators, generators, async e mais",
   aws: "Lambda, Step Functions, API Gateway, S3, EC2 e mais",
   "github-actions": "Workflows, jobs, actions, CI/CD no GitHub",
